@@ -1,0 +1,158 @@
+\documentclass{beamer}
+\usetheme[sectionpage=progressbar, subsectionpage=progressbar, numbering=fraction, progressbar=foot, block=fill, background=light]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{textpos}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usetikzlibrary{backgrounds}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\title{Attention based models in End-to-End ASR}
+\subtitle{Exploration of Attention in ESPNET toolkit}
+\date{\today}
+\author{Shreekantha Nadig}
+\institute{International Institute of Information Technology - Bangalore}
+%\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,shadows,arrows,patterns}
+
+\begin{document}
+\tikzstyle{mlp} = [rectangle, draw, fill=blue!50, text width=5em, minimum height=5em, text centered, node distance=10em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{ellipse} = [draw, ellipse, fill=red!50, minimum height=4em]
+\tikzstyle{round} = [draw, circle, fill=green!50, minimum size=4em, node distance=4em]
+\tikzstyle{hidden} = [rectangle, pattern=north west lines, pattern color=blue, draw, text width=1em, minimum height=10em, minimum width=3em, text centered, node distance=10em]
+\tikzstyle{attention_weights} = [rectangle, pattern=crosshatch, pattern color=orange!30, draw, text width=1em, minimum height=10em, minimum width=3em, text centered, node distance=10em]
+\maketitle
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.97\textwidth,-1cm)
+		{\includegraphics[width=2.5em]{iiitb_logo.png}}
+\end{textblock*}}
+
+\begin{frame}{Table of contents}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+\begin{frame}[fragile]{Location Aware Attention}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.7, every node/.style={transform shape}]
+			\only<1>{
+			\node [draw, rectangle] (alpha_t) {$\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$};
+			\node [draw, rectangle, above of = alpha_t, node distance = 2em] (alpha_t_padded) {0 \hspace{1em} 0 \dots \hspace{1em} 0  $\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$ 0 \hspace{1em} 0 \dots \hspace{1em} 0};
+			\node [above of = alpha_t_padded, node distance = 2em] (conv) {*};
+
+			\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w1)
+			{$w_{1}^{1}$ $w_{2}^{1}$ \dots $w_{i}^{1}$ \dots $w_{filt\_size}^{1}$};
+			\begin{scope}[on background layer]
+				\node [draw, rectangle, above of = w1, node distance = 1.5em, fill=blue!10, xshift=1em] (w2)
+				{$w_{1}^{2}$ $w_{2}^{2}$ \dots $w_{i}^{2}$ \dots $w_{filt\_size}^{2}$};
+			\end{scope}
+			
+			\node [draw, rectangle, above of = w2, node distance = 4em, fill=blue!10, xshift=4em] (wT)
+			{$w_{1}^{nf}$ $w_{2}^{nf}$ \dots $w_{i}^{nf}$ \dots $w_{filt\_size}^{nf}$};
+			\path [line, dotted] (w2.171) to (wT.171);
+			\path [line, dotted] (w2.9) to (wT.9);	
+			}
+		
+			\only<2-3>{
+			\node [draw, rectangle, above of = alpha_t, node distance = 2em] (alpha_t_padded) {0 \hspace{1em} 0 \dots \hspace{1em} 0  $\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$ 0 \hspace{1em} 0 \dots \hspace{1em} 0};
+			\node [above of = alpha_t_padded, node distance = 2em] (conv) {*};
+		
+			\only<2>{
+				\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w1)
+				{$w_{1}^{1}$ $w_{2}^{1}$ \dots $w_{i}^{1}$ \dots $w_{filt\_size}^{1}$};
+				\node [above of = w1, yshift=-5] (eq1) {\rotatebox{90}{$\,=$}};
+				\node [draw, rectangle, above of = w1, node distance = 4em, fill=red!50] (w1)
+				{$\beta_{1}^{1}$ \hspace{1em} $\beta_{2}^{1}$ \dots  \dots \dots $\beta_{i}^{1}$ \dots \dots \dots $\beta_{Tx}^{1}$};
+			}
+			\only<3>{
+				\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w2)
+				{$w_{1}^{2}$ $w_{2}^{2}$ \dots $w_{i}^{2}$ \dots $w_{filt\_size}^{2}$};
+				\node [above of = w2, yshift=-5] (eq1) {\rotatebox{90}{$\,=$}};
+				\node [draw, rectangle, above of = w2, node distance = 4em, fill=red!50] (w1)
+				{$\beta_{1}^{2}$ \hspace{1em} $\beta_{2}^{2}$ \dots  \dots \dots $\beta_{i}^{2}$ \dots \dots \dots $\beta_{Tx}^{2}$};
+			}
+			}
+		
+
+			\only<4>{
+				\node [draw, rectangle] (alpha_t) {$\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$};
+				\node [draw, rectangle, above of = alpha_t, node distance = 2em] (alpha_t_padded) {0 \hspace{1em} 0 \dots \hspace{1em} 0  $\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$ 0 \hspace{1em} 0 \dots \hspace{1em} 0};
+				\node [above of = alpha_t_padded, node distance = 2em] (conv) {*};
+				
+				\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w1)
+				{$w_{1}^{1}$ $w_{2}^{1}$ \dots $w_{i}^{1}$ \dots $w_{filt\_size}^{1}$};
+				\begin{scope}[on background layer]
+				\node [draw, rectangle, above of = w1, node distance = 1.5em, fill=blue!10, xshift=1em] (w2)
+				{$w_{1}^{2}$ $w_{2}^{2}$ \dots $w_{i}^{2}$ \dots $w_{filt\_size}^{2}$};
+				\end{scope}
+				
+				\node [draw, rectangle, above of = w2, node distance = 4em, fill=blue!10, xshift=4em] (wT)
+				{$w_{1}^{nf}$ $w_{2}^{nf}$ \dots $w_{i}^{nf}$ \dots $w_{filt\_size}^{nf}$};
+				\path [line, dotted] (w2.171) to (wT.171);
+				\path [line, dotted] (w2.9) to (wT.9);	
+				
+				\node [above of = wT, yshift=-5] (eq1) {\rotatebox{45}{$\,=$}};
+				
+				\node [hidden, above of = wT, pattern=crosshatch, pattern color=orange!30, node distance = 10em] (b1) {$\beta_{1}^{1}$ \newline . \newline . \newline . \newline $\beta_{1}^{10}$} ;
+				\node [hidden, right of = b1, node distance = 10em] (b2) {$\beta_{Tx}^{1}$ \newline . \newline . \newline . \newline $\beta_{Tx}^{10}$} ;
+				\path [line, densely dotted, -] (b1.east) to (b2.west);
+				
+				\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (b1.north) -- (b2.north) node [black,midway, yshift=2em] {Tx};
+			}
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Location Aware Attention}
+\begin{center}
+	\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
+	\fontsize{20}{10}
+	\node [hidden] (h1) {$h_{1}$};
+	\node [hidden,right of = h1] (h2) {$h_{2}$};
+	\node [hidden,right of = h2, node distance = 30em] (hi) {$h_{i}$};
+	\node [hidden,right of = hi, node distance = 30em] (hTx) {$h_{Tx}$};
+	\draw [dotted] (h2.east) to (hi.west);
+	\draw [dotted] (hi.east) to (hTx.west);
+	
+	\node [mlp, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
+	\path [line] (h1.north) to (mlp1.south);
+	\node [hidden, above of = mlp1, minimum height = 12em, node distance = 12em, pattern color=red] (he1) {};
+	\path [line] (mlp1.north) to (he1.south);
+	
+	
+	\node [mlp, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
+	\path [line] (h2.north) to (mlp2.south);
+	\node [hidden, above of = mlp2, minimum height = 12em, node distance = 12em, pattern color=red] (he2) {};
+	\path [line] (mlp2.north) to (he2.south);
+	
+	
+	\node [mlp, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
+	\path [line] (hi.north) to (mlpi.south);
+	\node [hidden, above of = mlpi, minimum height = 12em, node distance = 12em, pattern color=red] (hei) {};
+	\path [line] (mlpi.north) to (hei.south);
+	
+	
+	\node [mlp, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
+	\path [line] (hTx.north) to (mlpTx.south);
+	\node [hidden, above of = mlpTx, minimum height = 12em, node distance = 12em, pattern color=red] (heTx) {};
+	\path [line] (mlpTx.north) to (heTx.south);
+	
+	\end{tikzpicture}
+\end{center}
+\end{frame}
+\end{document}
+%\begin{frame}[fragile]{title}
+%\begin{center}
+%	\begin{tikzpicture}[scale=0.3, every node/.style={transform shape}]
+%	
+%	\end{tikzpicture}
+%\end{center}
+%\end{frame}
