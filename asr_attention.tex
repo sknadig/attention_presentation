@@ -25,7 +25,7 @@
 
 
 \begin{document}
-\tikzstyle{mlp} = [rectangle, draw, fill=blue!50, text width=5em, minimum height=5em, text centered, node distance=10em]
+\tikzstyle{mlp_enc} = [rectangle, draw, fill=blue!50, text width=5em, minimum height=5em, text centered, node distance=10em]
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{ellipse} = [draw, ellipse, fill=red!50, minimum height=4em]
 \tikzstyle{round} = [draw, circle, fill=green!50, minimum size=4em, node distance=4em]
@@ -41,16 +41,16 @@
 \begin{frame}[fragile]{BLSTM}
 	\begin{center}
 	\begin{tikzpicture}[scale=0.3, every node/.style={transform shape}]
-			\onslide<1->\node[mlp](LSTM_1_1){LSTM};
-			\node[mlp, right of=LSTM_1_1](LSTM_1_2) {LSTM};
+			\onslide<1->\node[mlp_enc](LSTM_1_1){LSTM};
+			\node[mlp_enc, right of=LSTM_1_1](LSTM_1_2) {LSTM};
 			\path [line] (LSTM_1_1.20) to (LSTM_1_1.20-|LSTM_1_2.west);
 			\path [line] (LSTM_1_2.200) to (LSTM_1_2.-20-|LSTM_1_1.east);     
 			
-			\node[mlp, right of=LSTM_1_2, node distance = 20em](LSTM_1_i) {LSTM};
+			\node[mlp_enc, right of=LSTM_1_2, node distance = 20em](LSTM_1_i) {LSTM};
 			\path [line, dotted] (LSTM_1_2.20) to (LSTM_1_2.20-|LSTM_1_i.west);
 			\path [line, dotted] (LSTM_1_i.200) to (LSTM_1_i.200-|LSTM_1_2.east);
 			
-			\node[mlp, right of=LSTM_1_i, node distance = 20em](LSTM_1_Tx) {LSTM};
+			\node[mlp_enc, right of=LSTM_1_i, node distance = 20em](LSTM_1_Tx) {LSTM};
 			\path [line, dotted] (LSTM_1_i.20) to (LSTM_1_i.20-|LSTM_1_Tx.west);
 			\path [line, dotted] (LSTM_1_Tx.200) to (LSTM_1_Tx.200-|LSTM_1_i.east);
 			
@@ -64,16 +64,16 @@
 			\path [line] (xi) to (LSTM_1_i);
 			\path [line] (xTx) to (LSTM_1_Tx);
 			
-			\onslide<2->\node[mlp, above of = LSTM_1_1](LSTM_2_1){LSTM};
-			\node[mlp, right of=LSTM_2_1](LSTM_2_2) {LSTM};
+			\onslide<2->\node[mlp_enc, above of = LSTM_1_1](LSTM_2_1){LSTM};
+			\node[mlp_enc, right of=LSTM_2_1](LSTM_2_2) {LSTM};
 			\path [line] (LSTM_2_1.20) to (LSTM_2_1.20-|LSTM_2_2.west);
 			\path [line] (LSTM_2_2.200) to (LSTM_2_2.-20-|LSTM_2_1.east);     
 			
-			\node[mlp, right of=LSTM_2_2, node distance = 20em](LSTM_2_i) {LSTM};
+			\node[mlp_enc, right of=LSTM_2_2, node distance = 20em](LSTM_2_i) {LSTM};
 			\path [line, dotted] (LSTM_2_2.20) to (LSTM_2_2.20-|LSTM_2_i.west);
 			\path [line, dotted] (LSTM_2_i.200) to (LSTM_2_i.200-|LSTM_2_2.east);
 			
-			\node[mlp, right of=LSTM_2_i, node distance = 20em](LSTM_2_Tx) {LSTM};
+			\node[mlp_enc, right of=LSTM_2_i, node distance = 20em](LSTM_2_Tx) {LSTM};
 			\path [line, dotted] (LSTM_2_i.20) to (LSTM_2_i.20-|LSTM_2_Tx.west);
 			\path [line, dotted] (LSTM_2_Tx.200) to (LSTM_2_Tx.200-|LSTM_2_i.east);
 			
@@ -82,16 +82,16 @@
 			\path [line] (LSTM_1_i) to (LSTM_2_i);
 			\path [line] (LSTM_1_Tx) to (LSTM_2_Tx);
 			
-			\node[mlp, above of = LSTM_2_1, node distance = 15em](LSTM_i_1){LSTM};
-			\node[mlp, right of=LSTM_i_1](LSTM_i_2) {LSTM};
+			\node[mlp_enc, above of = LSTM_2_1, node distance = 15em](LSTM_i_1){LSTM};
+			\node[mlp_enc, right of=LSTM_i_1](LSTM_i_2) {LSTM};
 			\path [line] (LSTM_i_1.20) to (LSTM_i_1.20-|LSTM_i_2.west);
 			\path [line] (LSTM_i_2.200) to (LSTM_i_2.-20-|LSTM_i_1.east);     
 			
-			\node[mlp, right of=LSTM_i_2, node distance = 20em](LSTM_i_i) {LSTM};
+			\node[mlp_enc, right of=LSTM_i_2, node distance = 20em](LSTM_i_i) {LSTM};
 			\path [line, dotted] (LSTM_i_2.20) to (LSTM_i_2.20-|LSTM_i_i.west);
 			\path [line, dotted] (LSTM_i_i.200) to (LSTM_i_i.200-|LSTM_i_2.east);
 			
-			\node[mlp, right of=LSTM_i_i, node distance = 20em](LSTM_i_Tx) {LSTM};
+			\node[mlp_enc, right of=LSTM_i_i, node distance = 20em](LSTM_i_Tx) {LSTM};
 			\path [line, dotted] (LSTM_i_i.20) to (LSTM_i_i.20-|LSTM_i_Tx.west);
 			\path [line, dotted] (LSTM_i_Tx.200) to (LSTM_i_Tx.200-|LSTM_i_i.east);
 			
@@ -101,16 +101,16 @@
 			\path [line, dotted] (LSTM_2_Tx) to (LSTM_i_Tx);
 			
 			
-			\onslide<4->\node[mlp, above of = LSTM_i_1, node distance = 15em](LSTM_N_1){LSTM};
-			\node[mlp, right of=LSTM_N_1](LSTM_N_2) {LSTM};
+			\onslide<4->\node[mlp_enc, above of = LSTM_i_1, node distance = 15em](LSTM_N_1){LSTM};
+			\node[mlp_enc, right of=LSTM_N_1](LSTM_N_2) {LSTM};
 			\path [line] (LSTM_N_1.20) to (LSTM_N_1.20-|LSTM_N_2.west);
 			\path [line] (LSTM_N_2.200) to (LSTM_N_2.-20-|LSTM_N_1.east);     
 			
-			\node[mlp, right of=LSTM_N_2, node distance = 20em](LSTM_N_i) {LSTM};
+			\node[mlp_enc, right of=LSTM_N_2, node distance = 20em](LSTM_N_i) {LSTM};
 			\path [line, dotted] (LSTM_N_2.20) to (LSTM_N_2.20-|LSTM_N_i.west);
 			\path [line, dotted] (LSTM_N_i.200) to (LSTM_N_i.200-|LSTM_N_2.east);
 			
-			\node[mlp, right of=LSTM_N_i, node distance = 20em](LSTM_N_Tx) {LSTM};
+			\node[mlp_enc, right of=LSTM_N_i, node distance = 20em](LSTM_N_Tx) {LSTM};
 			\path [line, dotted] (LSTM_N_i.20) to (LSTM_N_i.20-|LSTM_N_Tx.west);
 			\path [line, dotted] (LSTM_N_Tx.200) to (LSTM_N_Tx.200-|LSTM_N_i.east);
 			
@@ -135,16 +135,16 @@
 	\begin{frame}[fragile]{Introduction to Attention}
 		\begin{center}
 			\begin{tikzpicture}[scale=0.3, every node/.style={transform shape}]
-				\node[mlp, node distance = 15em](LSTM_N_1){LSTM};
-				\node[mlp, right of=LSTM_N_1](LSTM_N_2) {LSTM};
+				\node[mlp_enc, node distance = 15em](LSTM_N_1){LSTM};
+				\node[mlp_enc, right of=LSTM_N_1](LSTM_N_2) {LSTM};
 				\path [line] (LSTM_N_1.20) to (LSTM_N_1.20-|LSTM_N_2.west);
 				\path [line] (LSTM_N_2.200) to (LSTM_N_2.-20-|LSTM_N_1.east);     
 				
-				\node[mlp, right of=LSTM_N_2, node distance = 20em](LSTM_N_i) {LSTM};
+				\node[mlp_enc, right of=LSTM_N_2, node distance = 20em](LSTM_N_i) {LSTM};
 				\path [line, dotted] (LSTM_N_2.20) to (LSTM_N_2.20-|LSTM_N_i.west);
 				\path [line, dotted] (LSTM_N_i.200) to (LSTM_N_i.200-|LSTM_N_2.east);
 				
-				\node[mlp, right of=LSTM_N_i, node distance = 20em](LSTM_N_Tx) {LSTM};
+				\node[mlp_enc, right of=LSTM_N_i, node distance = 20em](LSTM_N_Tx) {LSTM};
 				\path [line, dotted] (LSTM_N_i.20) to (LSTM_N_i.20-|LSTM_N_Tx.west);
 				\path [line, dotted] (LSTM_N_Tx.200) to (LSTM_N_Tx.200-|LSTM_N_i.east);
 				
@@ -182,12 +182,12 @@
 				\path [line] (sum1) to (ci.south);
 				
 				\pause{}
-				\node [mlp, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
+				\node [mlp_enc, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
 				\node [above of = decoder_tm1, node distance = 5em, xshift = 8em] (ytm1) {$y_{t-1}$};
 				\path [line, dotted] (decoder_tm1) to (ytm1);
 				\pause{}
 				\pause{}
-				\node [mlp, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
+				\node [mlp_enc, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
 				\path [line] (decoder_tm1.east) to (decoder_t.west);
 				\path [line] (ci.north) to [bend left=45] (decoder_t.west);
 				\path [line, dotted] (ytm1) to (decoder_t.west);
@@ -201,16 +201,16 @@
 	\begin{frame}[fragile]{No Attention [Equal Attention?]}
 	\begin{center}
 	\begin{tikzpicture}[scale=0.3, every node/.style={transform shape}]
-		\node[mlp, node distance = 15em](LSTM_N_1){LSTM};
-		\node[mlp, right of=LSTM_N_1](LSTM_N_2) {LSTM};
+		\node[mlp_enc, node distance = 15em](LSTM_N_1){LSTM};
+		\node[mlp_enc, right of=LSTM_N_1](LSTM_N_2) {LSTM};
 		\path [line] (LSTM_N_1.20) to (LSTM_N_1.20-|LSTM_N_2.west);
 		\path [line] (LSTM_N_2.200) to (LSTM_N_2.-20-|LSTM_N_1.east);     
 		
-		\node[mlp, right of=LSTM_N_2, node distance = 20em](LSTM_N_i) {LSTM};
+		\node[mlp_enc, right of=LSTM_N_2, node distance = 20em](LSTM_N_i) {LSTM};
 		\path [line, dotted] (LSTM_N_2.20) to (LSTM_N_2.20-|LSTM_N_i.west);
 		\path [line, dotted] (LSTM_N_i.200) to (LSTM_N_i.200-|LSTM_N_2.east);
 		
-		\node[mlp, right of=LSTM_N_i, node distance = 20em](LSTM_N_Tx) {LSTM};
+		\node[mlp_enc, right of=LSTM_N_i, node distance = 20em](LSTM_N_Tx) {LSTM};
 		\path [line, dotted] (LSTM_N_i.20) to (LSTM_N_i.20-|LSTM_N_Tx.west);
 		\path [line, dotted] (LSTM_N_Tx.200) to (LSTM_N_Tx.200-|LSTM_N_i.east);
 		
@@ -247,12 +247,12 @@
 		\path [line] (sum1) to (ci.south);
 		
 		
-		\node [mlp, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
+		\node [mlp_enc, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
 		\node [above of = decoder_tm1, node distance = 5em, xshift = 8em] (ytm1) {$y_{t-1}$};
 		\path [line, dotted] (decoder_tm1) to (ytm1);
 		
 		
-		\node [mlp, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
+		\node [mlp_enc, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
 		\path [line] (decoder_tm1.east) to (decoder_t.west);
 		\path [line] (ci.north) to [bend left=45] (decoder_t.west);
 		\path [line, dotted] (ytm1) to (decoder_t.west);
@@ -288,17 +288,17 @@
 			
 			\node [hidden, right of=dec_z, node distance = 10em, fill=green!20, minimum height = 8em, yshift=-3.5em] (alpha) {w};
 			
-			\node [mlp, below of=h1, node distance = 15em] (mlp_enc) {$MLP_{enc}$};
-			\node [mlp, right of=mlp_enc, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
-			\node [mlp, right of=mlp_dec, node distance = 10em] (mlp_att) {$MLP_{att}$};
+			\node [mlp_enc, below of=h1, node distance = 15em] (mlp_enc) {$MLP_{enc}$};
+			\node [mlp_enc, right of=mlp_enc, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
+			\node [mlp_enc, right of=mlp_dec, node distance = 10em] (mlp_att) {$MLP_{att}$};
 			
 			\path [line] (h1.south) to (mlp_enc.north);
 			\path [line] (dec_z.south) to (mlp_dec.north);
 			\path [line] (alpha.south) to (mlp_att.north);
 			
-			\node [hidden, below of=mlp_enc, node distance = 10em] (h_att);
-			\node [hidden, below of=mlp_dec, node distance = 10em] (z_att);
-			\node [hidden, below of=mlp_att, node distance = 10em] (alpha_att);
+			\node [hidden, below of=mlp_enc, node distance = 10em] (h_att) {};
+			\node [hidden, below of=mlp_dec, node distance = 10em] (z_att) {};
+			\node [hidden, below of=mlp_att, node distance = 10em] (alpha_att) {};
 			
 			\path [line] (mlp_enc.south) to (h_att.north);
 			\path [line] (mlp_dec.south) to (z_att.north);
@@ -319,25 +319,25 @@
 				\draw [dotted] (hi.east) to (hTx.west);
 				\pause{}
 				
-				\node [mlp, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
+				\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
 					\path [line] (h1.north) to (mlp1.south);
 				\node [hidden, above of = mlp1, minimum height = 12em, node distance = 12em, fill=green!10] (he1) {};
 				\path [line] (mlp1.north) to (he1.south);
 				
 				\pause{}
-				\node [mlp, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
+				\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
 				\path [line] (h2.north) to (mlp2.south);
 				\node [hidden, above of = mlp2, minimum height = 12em, node distance = 12em, fill=green!10] (he2) {};
 				\path [line] (mlp2.north) to (he2.south);
 				
 				\pause{}
-				\node [mlp, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
+				\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
 				\path [line] (hi.north) to (mlpi.south);
 				\node [hidden, above of = mlpi, minimum height = 12em, node distance = 12em, fill=green!10] (hei) {};
 				\path [line] (mlpi.north) to (hei.south);
 				
 				\pause{}
-				\node [mlp, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
+				\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
 				\path [line] (hTx.north) to (mlpTx.south);
 				\node [hidden, above of = mlpTx, minimum height = 12em, node distance = 12em, fill=green!10] (heTx) {};
 				\path [line] (mlpTx.north) to (heTx.south);
@@ -357,32 +357,32 @@
 		\draw [dotted] (hi.east) to (hTx.west);
 		
 		
-		\node [mlp, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
+		\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
 		\path [line] (h1.north) to (mlp1.south);
 		\node [hidden, above of = mlp1, minimum height = 12em, node distance = 12em, fill=green!10] (he1) {};
 		\path [line] (mlp1.north) to (he1.south);
 		
 		
-		\node [mlp, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
+		\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
 		\path [line] (h2.north) to (mlp2.south);
 		\node [hidden, above of = mlp2, minimum height = 12em, node distance = 12em, fill=green!10] (he2) {};
 		\path [line] (mlp2.north) to (he2.south);
 		
 		
-		\node [mlp, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
+		\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
 		\path [line] (hi.north) to (mlpi.south);
 		\node [hidden, above of = mlpi, minimum height = 12em, node distance = 12em, fill=green!10] (hei) {};
 		\path [line] (mlpi.north) to (hei.south);
 		
 		
-		\node [mlp, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
+		\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
 		\path [line] (hTx.north) to (mlpTx.south);
 		\node [hidden, above of = mlpTx, minimum height = 12em, node distance = 12em, fill=green!10] (heTx) {};
 		\path [line] (mlpTx.north) to (heTx.south);
 		
-		\node [mlp, fill=blue!30, above of = hei, node distance = 60em, minimum width = 10em, xshift = -10em] (sim1) {$s_{i-1}$};
-		\node [mlp, fill=blue!30 , below of=sim1, minimum width = 20em] (dec_z) {decz};
-		\node [mlp, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
+		\node [mlp_enc, fill=blue!30, above of = hei, node distance = 60em, minimum width = 10em, xshift = -10em] (sim1) {$s_{i-1}$};
+		\node [mlp_enc, fill=blue!30 , below of=sim1, minimum width = 20em] (dec_z) {decz};
+		\node [mlp_enc, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
 		\path [line] (dec_z) to (mlp_dec);
 		\node [hidden, below of = mlp_dec, minimum height = 12em, node distance = 12em, fill=green!10] (decz_enc) {};
 		\path [line] (mlp_dec) to (decz_enc);
@@ -429,7 +429,7 @@
 		\path [line, dotted] (eTx.east) to (e.-105);
 		
 		\pause{}
-		\node [mlp, right of=e] (sm) {Softmax};
+		\node [mlp_enc, right of=e] (sm) {Softmax};
 		\path [line] (e.east) to (sm.west);
 		
 		\pause{}
@@ -485,32 +485,32 @@
 			\draw [dotted] (hi.east) to (hTx.west);
 			
 			
-			\node [mlp, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
+			\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
 			\path [line] (h1.north) to (mlp1.south);
 			\node [hidden, above of = mlp1, minimum height = 12em, node distance = 12em, fill=green!10] (he1) {};
 			\path [line] (mlp1.north) to (he1.south);
 			
 			
-			\node [mlp, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
+			\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
 			\path [line] (h2.north) to (mlp2.south);
 			\node [hidden, above of = mlp2, minimum height = 12em, node distance = 12em, fill=green!10] (he2) {};
 			\path [line] (mlp2.north) to (he2.south);
 			
 			
-			\node [mlp, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
+			\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
 			\path [line] (hi.north) to (mlpi.south);
 			\node [hidden, above of = mlpi, minimum height = 12em, node distance = 12em, fill=green!10] (hei) {};
 			\path [line] (mlpi.north) to (hei.south);
 			
 			
-			\node [mlp, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
+			\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
 			\path [line] (hTx.north) to (mlpTx.south);
 			\node [hidden, above of = mlpTx, minimum height = 12em, node distance = 12em, fill=green!10] (heTx) {};
 			\path [line] (mlpTx.north) to (heTx.south);
 			
-			\node [mlp, fill=blue!30, above of = hei, node distance = 60em, minimum width = 10em, xshift = -10em] (sim1) {$s_{i-1}$};
-			\node [mlp, fill=blue!30 , below of=sim1, minimum width = 20em] (dec_z) {decz};
-			\node [mlp, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
+			\node [mlp_enc, fill=blue!30, above of = hei, node distance = 60em, minimum width = 10em, xshift = -10em] (sim1) {$s_{i-1}$};
+			\node [mlp_enc, fill=blue!30 , below of=sim1, minimum width = 20em] (dec_z) {decz};
+			\node [mlp_enc, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
 			\path [line] (dec_z) to (mlp_dec);
 			\node [hidden, below of = mlp_dec, minimum height = 12em, node distance = 12em, fill=green!10] (decz_enc) {};
 			\path [line] (mlp_dec) to (decz_enc);
@@ -525,7 +525,7 @@
 			\path [line, dotted] (prod.east) to [bend left=45] (h_z.west);
 			
 			\pause{}
-			\node [mlp, right of=h_z, node distance = 15em] (mlp_g) {$MLP_{g}$};
+			\node [mlp_enc, right of=h_z, node distance = 15em] (mlp_g) {$MLP_{g}$};
 			\path [line, dotted] (h_z.east) to (mlp_g.west);
 			
 			
@@ -558,7 +558,7 @@
 			\path [line, dotted] (eTx.east) to (e.-105);
 			
 			\pause{}
-			\node [mlp, right of=e] (sm) {Softmax};
+			\node [mlp_enc, right of=e] (sm) {Softmax};
 			\path [line] (e.east) to (sm.west);
 			
 			\pause{}
