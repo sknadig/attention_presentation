@@ -1,0 +1,119 @@
+\frametitle{Location Aware Attention - Full picture}
+\begin{center}
+		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
+		\node [enc_h] (h1) {$h_{1}$};
+		\node [enc_h,right of = h1] (h2) {$h_{2}$};
+		\node [enc_h,right of = h2, node distance = 30em] (hi) {$h_{i}$};
+		\node [enc_h,right of = hi, node distance = 30em] (hTx) {$h_{Tx}$};
+		\draw [dotted] (h2.east) to (hi.west);
+		\draw [dotted] (hi.east) to (hTx.west);
+
+
+		\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
+		\path [line] (h1.north) to (mlp1.south);
+		\node [enc_h, above of = mlp1] (he1) {};
+		\path [line] (mlp1.north) to (he1.south);
+
+
+		\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
+		\path [line] (h2.north) to (mlp2.south);
+		\node [enc_h, above of = mlp2] (he2) {};
+		\path [line] (mlp2.north) to (he2.south);
+
+
+		\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
+		\path [line] (hi.north) to (mlpi.south);
+		\node [enc_h, above of = mlpi] (hei) {};
+		\path [line] (mlpi.north) to (hei.south);
+
+
+		\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
+		\path [line] (hTx.north) to (mlpTx.south);
+		\node [enc_h, above of = mlpTx] (heTx) {};
+		\path [line] (mlpTx.north) to (heTx.south);
+		\node [draw, rectangle, above of=hei, node distance = 70em,font=\fontsize{40}{10}\selectfont] (alpha_t) {$\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$};
+		\node [cnn, below of=alpha_t, node distance = 12em] (cnn1) {CNN};
+		\path [line] (alpha_t.south) to (cnn1.north);
+		\node [atts, above of = he1,minimum height=5em, node distance = 40em] (beta1) {$\beta^1$};
+		\node [atts, above of = he2, minimum height=5em, node distance = 40em] (beta2) {$\beta^2$};
+		\node [atts, above of = hei, minimum height=5em, node distance = 40em] (betai) {$\beta^i$};
+		\node [atts, above of = heTx, minimum height=5em, node distance = 40em] (betaTx) {$\beta^Tx$};
+
+		\path [line] (cnn1.south) to [bend right=10] (beta1.north);
+		\path [line] (cnn1.south) to [bend right=10] (beta2.north);
+		\path [line] (cnn1.south) to (betai.north);
+		\path [line] (cnn1.south) to [bend left=10] (betaTx.north);
+
+		\node [mlp_att, below of=betai, node distance = 10em] (mlpatt) {$MLP_{att}$};
+		\node [atts, below of = beta1, node distance = 20em] (beta1_enc) {};
+		\node [atts, below of = beta2, node distance = 20em] (beta2_enc) {};
+		\node [atts, below of = betai, node distance = 20em] (betai_enc) {};
+		\node [atts, below of = betaTx, node distance = 20em] (betaTx_enc) {};
+		\path [line, dotted] (beta1.south) parabola bend (mlpatt) (beta1_enc.north);
+		\path [line, dotted] (beta2.south) parabola bend (mlpatt) (beta2_enc.north);
+		\path [line, dotted] (betai.south) parabola bend (mlpatt) (betai_enc.north);
+		\path [line, dotted] (betaTx.south) parabola bend (mlpatt) (betaTx_enc.north);
+
+		\node [round, below of=betaTx_enc, node distance=10em, xshift=10em] (sum1) {$\sum$};
+
+		\node [mlp_dec, right of = betaTx, node distance = 10em, minimum width = 10em, yshift=30em, font=\fontsize{40}{10}\selectfont] (sim1) {$s_{i-1}$};
+		\node [mlp_dec, below of=sim1, minimum width = 20em, font=\fontsize{40}{10}\selectfont] (dec_z) {decz};
+		\path [line, dotted] (sim1.200) to (dec_z.170);
+		\path [line, dotted] (sim1.-20) to (dec_z.10);
+		\node [mlp_dec, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
+		\path [line] (dec_z) to (mlp_dec);
+		\node [dec_z, below of = mlp_dec] (decz_enc) {};
+		\path [line] (mlp_dec) to (decz_enc);
+
+		\path [line, dotted] (beta1_enc.south) to [bend right=2] (sum1.west);
+		\path [line, dotted] (he1.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (decz_enc.south) to (sum1.north);
+
+		\path [line, dotted] (beta2_enc.south) to [bend right=2] (sum1.west);
+		\path [line, dotted] (he2.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (decz_enc.south) to (sum1.north);
+
+		\path [line, dotted] (betai_enc.south) to [bend right=2] (sum1.west);
+		\path [line, dotted] (hei.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (decz_enc.south) to (sum1.north);
+
+		\path [line, dotted] (betaTx_enc.south) to [bend right=2] (sum1.west);
+		\path [line, dotted] (heTx.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (decz_enc.south) to (sum1.north);
+
+		\node [atts, right of=sum1, node distance = 10em] (asdf) {};
+		\node [mlp_att, right of=asdf] (mlpg) {$MLP_{g}$};
+		\node [right of=mlpg, node distance=15em, font=\fontsize{40}{10}\selectfont] (e1) {$e_1$};
+
+		\node [below of=e1, node distance=10em, font=\fontsize{40}{10}\selectfont] (e2) {$e_2$};
+
+		\node [below of=e2, node distance=10em, font=\fontsize{40}{10}\selectfont] (ei) {$e_i$};
+
+		\node [below of=ei, node distance=10em, font=\fontsize{40}{10}\selectfont] (eTx) {$e_{Tx}$};
+
+		\node [atts, right of=ei, font=\fontsize{40}{10}\selectfont] (e) {e};
+
+		\path [line, dotted] (e1.east) to (e.105);
+		\path [line, dotted] (e2.east) to (e.130);
+		\path [line, dotted] (ei.east) to (e.-130);
+		\path [line, dotted] (eTx.east) to (e.-105);
+
+		\node [mlp_att, right of=e, font=\fontsize{40}{10}\selectfont] (sm) {$\sigma$};
+		\path [line] (e.east) to (sm.west);
+
+
+		\node [atts, right of=sm, font=\fontsize{40}{10}\selectfont] (alphas) {$\alpha$};
+		\path [line] (sm.east) to (alphas.west);
+
+		\path [line, dotted] (sum1.east) to (asdf.west);
+		\path [line, dotted] (sum1.east) to (asdf.west);
+		\path [line, dotted] (asdf.east) to (mlpg.west);
+		\path [line, dotted] (mlpg.east) to (e1.west);
+		\path [line, dotted] (mlpg.east) to (e1.west);
+		\path [line, dotted] (mlpg.east) |- (e2.west);
+		\path [line, dotted] (mlpg.east) |- (ei.west);
+		\path [line, dotted] (mlpg.east) |- (eTx.west);
+
+
+		\end{tikzpicture}
+	\end{center}

@@ -1,0 +1,26 @@
+\frametitle{2D Location Aware Attention - weights}
+\begin{center}
+		\begin{tikzpicture}[scale = 0.3, every node/.style={transform shape}]
+			\matrix [matrix of nodes, draw, .style={nodes={draw=none, minimum width=1em}}, font=\fontsize{3}{3}\selectfont, inner sep = 2pt] (m)
+			{
+				$\beta_{1}^{1}$ & $\beta_{1}^{2}$ & \dots  & \dots & $\beta_{1}^{i}$ & \dots & \dots & $\beta_{1}^{Tx}$ \\
+
+				$\beta_{2}^{1}$ & $\beta_{2}^{2}$ & \dots  & \dots & $\beta_{2}^{i}$ & \dots & \dots & $\beta_{2}^{Tx}$ \\
+
+				\dots & \dots & \dots  & \dots & \dots & \dots & \dots & \dots \\
+
+				$\beta_{i}^{1}$ & $\beta_{i}^{2}$ & \dots  & \dots & $\beta_{i}^{i}$ & \dots & \dots & $\beta_{i}^{Tx}$ \\
+
+				\dots & \dots & \dots  & \dots & \dots & \dots & \dots & \dots \\
+
+				$\beta_{10}^{1}$ & $\beta_{10}^{2}$ & \dots  & \dots & $\beta_{10}^{i}$ & \dots & \dots & $\beta_{10}^{Tx}$ \\
+			};
+		\node [mlp_att, right of = m, node distance = 20em, text width = 10em] (maxp) {MaxPool2D};
+
+		\node [atts, right of = maxp, minimum height = 15em, \fontsize{20}{20}\selectfont] (betastar) {$\beta_{1}^{\star}$ \newline . \newline . \newline . \newline . \newline . \newline . $\beta_{10}^{\star}$};
+
+		\node [mlp_att, right of=betastar, text width = 10em] (lstm) {$LSTM_{att}$};
+
+		\node [atts, right of=lstm, text width = 2cm] (ht) {$h_{t}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . $h_{t}^{att\_dim}$};
+		\end{tikzpicture}
+		\end{center}

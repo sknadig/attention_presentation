@@ -22,9 +22,9 @@
 \input{tikz_styles.tex}
 
 \begin{document}
-	\addtobeamertemplate{frametitle}{}{%
+\addtobeamertemplate{frametitle}{}{%
 	\begin{textblock*}{100mm}(.97\textwidth,-1cm)
-			{\includegraphics[width=2.5em]{iiitb_logo.png}}
+		{\includegraphics[width=2.5em]{iiitb_logo.png}}
 	\end{textblock*}}
 \maketitle
 
@@ -35,7 +35,7 @@
 
 \section{AttDot}
 \section{Introduction}
-	\begin{frame}[fragile]{Dot product Attention}
+	\begin{frame}[fragile]{Additive Attention}
 	\begin{center}
 		\begin{tikzpicture}[scale=0.3, every node/.style={transform shape}]
 		\node [enc_h] (h1) {$h_{1}$};
@@ -72,7 +72,7 @@
 	\end{center}
 	\end{frame}
 
-	\begin{frame}[fragile]{Dot product Attention}
+	\begin{frame}[fragile]{Additive Attention}
 	\begin{center}
 		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
 		\node [enc_h] (h1) {$h_{1}$};
@@ -116,7 +116,7 @@
 		\path [line] (mlp_dec) to (decz_enc);
 
 		\uncover<2-7>{
-		\node [round, below of = decz_enc, node distance = 15em] (prod) {$\circ$}; 
+		\node [round, below of = decz_enc, node distance = 15em] (prod) {$\sum$}; 
 		\path [line, dotted] (decz_enc.south) to (prod.north);
 		\uncover<2-4>{
 		\path [line, dotted] (he1.north) to [bend left=15] (prod.west);
@@ -126,7 +126,8 @@
 		}
 
 		\uncover<3-7>{
-		\node [round, right of = h_z, node distance = 15em] (sum) {$\sum$};
+		\node [mlp_att, right of = h_z, node distance = 15em] (sum) {$MLP_{att}$};
+%		\node [round, right of = h_z, node distance = 15em] (sum) {$\sum$};
 		\path [line, dotted] (h_z.east) to (sum.west);
 		}
 	
@@ -178,7 +179,6 @@
 		\node [enc_h, right of=sm, font=\fontsize{40}{10}\selectfont] (alphas) {$\alpha$};
 		\path [line] (sm.east) to (alphas.west);
 		}
-	
 		\uncover<9>{
 		\node [round, right of=sum, node distance=20em] (alpha_h) {$\circ$};
 		\path [line, dotted, color=black] (h1.north) to [bend left=10] (alpha_h.west);
@@ -217,7 +217,7 @@
 	\end{frame}
 
 
-	\begin{frame}[fragile]{Dot product Attention - Full picture}
+	\begin{frame}[fragile]{Additive Attention - Full picture}
 	\begin{center}
 		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
 		\node [enc_h] (h1) {$h_{1}$};
@@ -261,7 +261,7 @@
 		\path [line] (mlp_dec) to (decz_enc);
 		
 	
-		\node [round, below of = decz_enc, node distance = 15em] (prod) {$\circ$}; 
+		\node [round, below of = decz_enc, node distance = 15em] (prod) {$\sum$}; 
 		\path [line, dotted] (decz_enc.south) to (prod.north);
 	
 		\path [line, dotted] (he1.north) to [bend left=15] (prod.west);

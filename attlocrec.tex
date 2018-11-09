@@ -18,7 +18,7 @@
 %\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
 \usepackage{tikz}
-\usetikzlibrary{shapes,shadows,arrows,patterns}
+\usetikzlibrary{shapes,shadows,arrows,patterns, matrix}
 
 \input{tikz_styles.tex}
 
@@ -35,79 +35,118 @@
 	\tableofcontents[hideallsubsections]
 \end{frame}
 
+
+
 \section{Introduction}
-\begin{frame}[fragile]{Location Aware Attention}
-	\begin{center}
-		\begin{tikzpicture}[scale=0.7, every node/.style={transform shape}]
-			\only<1>{
-			\node [draw, rectangle] (alpha_t) {$\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$};
-			\node [draw, rectangle, above of = alpha_t, node distance = 2em] (alpha_t_padded) {0 \hspace{1em} 0 \dots \hspace{1em} 0  $\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$ 0 \hspace{1em} 0 \dots \hspace{1em} 0};
-			\node [above of = alpha_t_padded, node distance = 2em] (conv) {*};
 
-			\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w1)
-			{$w_{1}^{1}$ $w_{2}^{1}$ \dots $w_{i}^{1}$ \dots $w_{filt\_size}^{1}$};
-			\begin{scope}[on background layer]
-				\node [draw, rectangle, above of = w1, node distance = 1.5em, fill=blue!10, xshift=1em] (w2)
-				{$w_{1}^{2}$ $w_{2}^{2}$ \dots $w_{i}^{2}$ \dots $w_{filt\_size}^{2}$};
-			\end{scope}
+\begin{frame}[fragile]{2D Location Aware Attention}
+\begin{center}
+	\begin{tikzpicture}[scale=0.3, every node/.style={transform shape, font=\fontsize{5}{10}\selectfont}]
+	\matrix [matrix of nodes, draw, .style={nodes={draw=none, minimum width=1em}}] (m)
+	{
+		$\alpha_{1}^{t-5}$ & $\alpha_{2}^{t-5}$ & \dots  & \dots & $\alpha_{i}^{t-5}$ & \dots & \dots & $\alpha_{Tx}^{t-5}$ \\
+		
+		$\alpha_{1}^{t-4}$ & $\alpha_{2}^{t-4}$ & \dots  & \dots & $\alpha_{i}^{t-4}$ & \dots & \dots & $\alpha_{Tx}^{t-4}$ \\
+		
+		$\alpha_{1}^{t-3}$ & $\alpha_{2}^{t-3}$ & \dots  & \dots & $\alpha_{i}^{t-3}$ & \dots & \dots & $\alpha_{Tx}^{t-3}$ \\
+		
+		$\alpha_{1}^{t-2}$ & $\alpha_{2}^{t-2}$ & \dots  & \dots & $\alpha_{i}^{t-2}$ & \dots & \dots & $\alpha_{Tx}^{t-2}$ \\
+		
+		$\alpha_{1}^{t-1}$ & $\alpha_{2}^{t-1}$ & \dots  & \dots & $\alpha_{i}^{t-1}$ & \dots & \dots & $\alpha_{Tx}^{t-1}$ \\
+	};
+
+	\node [mlp_att, right of=m, node distance = 30em] (cnn1) {CNN};
+	\path [line] (m.east) to (cnn1.west);
+	\matrix [matrix of nodes, right of = cnn1,fill=green!10, node distance = 20em, draw, .style={nodes={draw=none, minimum width=1em}}] (m1)
+	{
+		$w_{5,1}^{1}$ & \dots & $w_{5,201}^{1}$ \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		$w_{1,1}^{1}$ & \dots & $w_{1,201}^{1}$ \\
+	};
+	
+	\begin{scope}[on background layer]
+	\matrix [matrix of nodes, above of = m1, fill=green!10, xshift=10em, node distance = 20em, draw, .style={nodes={draw=none, minimum width=1em}}] (m3)
+	{
+		$w_{5,1}^{10}$ & \dots & $w_{5,201}^{10}$ \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		$w_{1,1}^{10}$ & \dots & $w_{1,201}^{10}$ \\
+	};
+	\end{scope}
+	
+	\begin{scope}[on background layer]
+		\matrix [matrix of nodes, above of = m1, fill=green!10, xshift=2em, node distance = 5em, draw, .style={nodes={draw=none, minimum width=1em}}] (m2)
+		{
+			$w_{5,1}^{2}$ & \dots & $w_{5,201}^{2}$ \\
 			
-			\node [draw, rectangle, above of = w2, node distance = 4em, fill=blue!10, xshift=4em] (wT)
-			{$w_{1}^{nf}$ $w_{2}^{nf}$ \dots $w_{i}^{nf}$ \dots $w_{filt\_size}^{nf}$};
-			\path [line, dotted] (w2.171) to (wT.171);
-			\path [line, dotted] (w2.9) to (wT.9);	
-			}
-		
-			\only<2-3>{
-			\node [draw, rectangle, above of = alpha_t, node distance = 2em] (alpha_t_padded) {0 \hspace{1em} 0 \dots \hspace{1em} 0  $\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$ 0 \hspace{1em} 0 \dots \hspace{1em} 0};
-			\node [above of = alpha_t_padded, node distance = 2em] (conv) {*};
-		
-			\only<2>{
-				\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w1)
-				{$w_{1}^{1}$ $w_{2}^{1}$ \dots $w_{i}^{1}$ \dots $w_{filt\_size}^{1}$};
-				\node [above of = w1, yshift=-5] (eq1) {\rotatebox{90}{$\,=$}};
-				\node [draw, rectangle, above of = w1, node distance = 4em, fill=green!50] (w1)
-				{$\beta_{1}^{1}$ \hspace{1em} $\beta_{2}^{1}$ \dots  \dots \dots $\beta_{i}^{1}$ \dots \dots \dots $\beta_{Tx}^{1}$};
-			}
-			\only<3>{
-				\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w2)
-				{$w_{1}^{2}$ $w_{2}^{2}$ \dots $w_{i}^{2}$ \dots $w_{filt\_size}^{2}$};
-				\node [above of = w2, yshift=-5] (eq1) {\rotatebox{90}{$\,=$}};
-				\node [draw, rectangle, above of = w2, node distance = 4em, fill=green!50] (w1)
-				{$\beta_{1}^{2}$ \hspace{1em} $\beta_{2}^{2}$ \dots  \dots \dots $\beta_{i}^{2}$ \dots \dots \dots $\beta_{Tx}^{2}$};
-			}
-			}
-		
-
-			\only<4>{
-				\node [draw, rectangle] (alpha_t) {$\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$};
-				\node [draw, rectangle, above of = alpha_t, node distance = 2em] (alpha_t_padded) {0 \hspace{1em} 0 \dots \hspace{1em} 0  $\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$ 0 \hspace{1em} 0 \dots \hspace{1em} 0};
-				\node [above of = alpha_t_padded, node distance = 2em] (conv) {*};
-				
-				\node [draw, rectangle, above of = alpha_t_padded, node distance = 4em, fill=blue!10] (w1)
-				{$w_{1}^{1}$ $w_{2}^{1}$ \dots $w_{i}^{1}$ \dots $w_{filt\_size}^{1}$};
-				\begin{scope}[on background layer]
-				\node [draw, rectangle, above of = w1, node distance = 1.5em, fill=blue!10, xshift=1em] (w2)
-				{$w_{1}^{2}$ $w_{2}^{2}$ \dots $w_{i}^{2}$ \dots $w_{filt\_size}^{2}$};
-				\end{scope}
-				
-				\node [draw, rectangle, above of = w2, node distance = 4em, fill=blue!10, xshift=4em] (wT)
-				{$w_{1}^{nf}$ $w_{2}^{nf}$ \dots $w_{i}^{nf}$ \dots $w_{filt\_size}^{nf}$};
-				\path [line, dotted] (w2.171) to (wT.171);
-				\path [line, dotted] (w2.9) to (wT.9);	
-				
-				\node [above of = wT, yshift=-5] (eq1) {\rotatebox{45}{$\,=$}};
-				
-				\node [atts, above of = wT, pattern=crosshatch, node distance = 10em] (b1) {$\beta_{1}^{1}$ \newline . \newline . \newline . \newline $\beta_{1}^{10}$} ;
-				\node [atts, right of = b1, pattern=crosshatch, node distance = 10em] (b2) {$\beta_{Tx}^{1}$ \newline . \newline . \newline . \newline $\beta_{Tx}^{10}$} ;
-				\path [line, densely dotted, -] (b1.east) to (b2.west);
-				
-				\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (b1.north) -- (b2.north) node [black,midway, yshift=2em] {Tx};
-			}
-		\end{tikzpicture}
-	\end{center}
+			\dots & \dots & \dots \\
+			
+			\dots & \dots & \dots \\
+			
+			\dots & \dots & \dots \\
+			
+			$w_{1,1}^{2}$ & \dots & $w_{1,201}^{2}$ \\
+		};
+	\end{scope}
+	
+	
+	\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (m3.43) -- (m3.-43) node [black,midway, xshift=5.5em] {\fontsize{25}{10}\selectfont $att_{win}$};
+	
+	\path [line, dotted] (m2.135) to (m3.135);
+	\path [line, dotted] (m2.43) to (m3.43);
+	\path [line, dotted] (m2.-43) to (m3.-43);
+	
+	\node [atts, above of = cnn1, pattern=crosshatch, pattern color = green!20, node distance = 30em, minimum height = 20em, text width=2cm,font=\fontsize{20}{20}\selectfont, xshift=-20em] (b1) {$\beta_{1}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline $\beta_{1}^{10}$} ;
+	
+	\node [atts, right of = b1, pattern=crosshatch, pattern color = green!20, node distance = 30em, minimum height = 20em, text width=2cm,font=\fontsize{20}{20}\selectfont] (b2) {$\beta_{Tx}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline $\beta_{Tx}^{10}$} ;
+	
+	\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (b1.north) -- (b2.north) node [black,midway, yshift=5em] {\fontsize{40}{10}\selectfont Tx};
+	
+	\node [above of = cnn1, yshift=10em, font=\fontsize{40}{10}\selectfont] (eq1) {\rotatebox{90}{$\,=$}};
+	\end{tikzpicture}
+\end{center}
 \end{frame}
+	
+	\begin{frame}[fragile]{2D Location Aware Attention - weights}
+	\begin{center}
+		\begin{tikzpicture}[scale = 0.3, every node/.style={transform shape}]
+			\matrix [matrix of nodes, draw, .style={nodes={draw=none, minimum width=1em}}, font=\fontsize{3}{3}\selectfont, inner sep = 2pt] (m)
+			{
+				$\beta_{1}^{1}$ & $\beta_{1}^{2}$ & \dots  & \dots & $\beta_{1}^{i}$ & \dots & \dots & $\beta_{1}^{Tx}$ \\
+				
+				$\beta_{2}^{1}$ & $\beta_{2}^{2}$ & \dots  & \dots & $\beta_{2}^{i}$ & \dots & \dots & $\beta_{2}^{Tx}$ \\
+				
+				\dots & \dots & \dots  & \dots & \dots & \dots & \dots & \dots \\
+				
+				$\beta_{i}^{1}$ & $\beta_{i}^{2}$ & \dots  & \dots & $\beta_{i}^{i}$ & \dots & \dots & $\beta_{i}^{Tx}$ \\
+				
+				\dots & \dots & \dots  & \dots & \dots & \dots & \dots & \dots \\
+				
+				$\beta_{10}^{1}$ & $\beta_{10}^{2}$ & \dots  & \dots & $\beta_{10}^{i}$ & \dots & \dots & $\beta_{10}^{Tx}$ \\
+			};
+		\node [mlp_att, right of = m, node distance = 20em, text width = 10em] (maxp) {MaxPool2D};
+		
+		\node [atts, right of = maxp, minimum height = 15em, \fontsize{20}{20}\selectfont] (betastar) {$\beta_{1}^{\star}$ \newline . \newline . \newline . \newline . \newline . \newline . $\beta_{10}^{\star}$};
+		
+		\node [mlp_att, right of=betastar, text width = 10em] (lstm) {$LSTM_{att}$};
+		
+		\node [atts, right of=lstm, text width = 2cm] (ht) {$h_{t}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . $h_{t}^{att\_dim}$};
+		\end{tikzpicture}
+		\end{center}
+	\end{frame}
 
-	\begin{frame}[fragile]{Location Aware Attention - Full picture}
+	\begin{frame}[fragile]{2D Location Aware Attention - Full picture}
 	\begin{center}
 		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
 		\node [enc_h] (h1) {$h_{1}$};
@@ -140,7 +179,11 @@
 		\path [line] (hTx.north) to (mlpTx.south);
 		\node [enc_h, above of = mlpTx] (heTx) {};
 		\path [line] (mlpTx.north) to (heTx.south);
-		\node [draw, rectangle, above of=hei, node distance = 70em,font=\fontsize{40}{10}\selectfont] (alpha_t) {$\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$};
+		
+			\node [draw, rectangle, above of=hei, node distance = 70em,font=\fontsize{40}{10}\selectfont, text width = 30em, text centered] (alpha_t) {$\alpha^{t-1}$ to $\alpha^{t-5}$};
+		
+		\matrix [matrix of nodes, draw , above of=hei, node distance = 70em, .style={nodes={draw=none, minimum width=1em}}, font=\fontsize{2}{2}\selectfont, inner sep = 2pt] (alpha_t)
+		{
 		\node [cnn, below of=alpha_t, node distance = 12em] (cnn1) {CNN};
 		\path [line] (alpha_t.south) to (cnn1.north);
 		\node [atts, above of = he1,minimum height=5em, node distance = 40em] (beta1) {$\beta^1$};
@@ -228,10 +271,3 @@
 	\end{center}
 	\end{frame}
 \end{document}
-%\begin{frame}[fragile]{title}
-%\begin{center}
-%	\begin{tikzpicture}[scale=0.3, every node/.style={transform shape}]
-%	
-%	\end{tikzpicture}
-%\end{center}
-%\end{frame}

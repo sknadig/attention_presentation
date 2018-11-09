@@ -1,4 +1,4 @@
-\frametitle{Dot product Attention - Full picture}
+\frametitle{Additive Attention - Full picture}
 \begin{center}
 		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
 		\node [enc_h] (h1) {$h_{1}$};
@@ -42,7 +42,7 @@
 		\path [line] (mlp_dec) to (decz_enc);
 
 
-		\node [round, below of = decz_enc, node distance = 15em] (prod) {$\circ$};
+		\node [round, below of = decz_enc, node distance = 15em] (prod) {$\sum$};
 		\path [line, dotted] (decz_enc.south) to (prod.north);
 
 		\path [line, dotted] (he1.north) to [bend left=15] (prod.west);

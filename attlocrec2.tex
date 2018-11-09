@@ -1,0 +1,281 @@
+\documentclass{beamer}
+\usetheme[sectionpage=progressbar, subsectionpage=progressbar, numbering=fraction, progressbar=foot, block=fill, background=light]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{textpos}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usetikzlibrary{backgrounds}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\title{Attention based models in End-to-End ASR}
+\subtitle{Exploration of Attention in ESPNET toolkit}
+\date{\today}
+\author{Shreekantha Nadig}
+\institute{International Institute of Information Technology - Bangalore}
+%\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,shadows,arrows,patterns, matrix}
+
+\input{tikz_styles.tex}
+
+\begin{document}
+	\addtobeamertemplate{frametitle}{}{%
+		\begin{textblock*}{100mm}(.97\textwidth,-1cm)
+			{\includegraphics[width=2.5em]{iiitb_logo.png}}
+		\end{textblock*}}
+
+%\maketitle
+
+\begin{frame}[fragile]{Location Aware Recurrent Attention}
+\begin{center}
+	\begin{tikzpicture}[scale=0.3, every node/.style={transform shape, font=\fontsize{5}{10}\selectfont}]
+	\matrix [matrix of nodes, draw, .style={nodes={draw=none, minimum width=1em}}] (m)
+	{
+		$\alpha_{1}^{t-5}$ & $\alpha_{2}^{t-5}$ & \dots  & \dots & $\alpha_{i}^{t-5}$ & \dots & \dots & $\alpha_{Tx}^{t-5}$ \\
+		
+		$\alpha_{1}^{t-4}$ & $\alpha_{2}^{t-4}$ & \dots  & \dots & $\alpha_{i}^{t-4}$ & \dots & \dots & $\alpha_{Tx}^{t-4}$ \\
+		
+		$\alpha_{1}^{t-3}$ & $\alpha_{2}^{t-3}$ & \dots  & \dots & $\alpha_{i}^{t-3}$ & \dots & \dots & $\alpha_{Tx}^{t-3}$ \\
+		
+		$\alpha_{1}^{t-2}$ & $\alpha_{2}^{t-2}$ & \dots  & \dots & $\alpha_{i}^{t-2}$ & \dots & \dots & $\alpha_{Tx}^{t-2}$ \\
+		
+		$\alpha_{1}^{t-1}$ & $\alpha_{2}^{t-1}$ & \dots  & \dots & $\alpha_{i}^{t-1}$ & \dots & \dots & $\alpha_{Tx}^{t-1}$ \\
+	};
+
+	\node [cnn, right of=m, node distance = 30em] (cnn1) {CNN};
+	\path [line] (m.east) to (cnn1.west);
+	\matrix [matrix of nodes, right of = cnn1,fill=green!10, node distance = 20em, draw, .style={nodes={draw=none, minimum width=1em}}] (m1)
+	{
+		$w_{5,1}^{1}$ & \dots & $w_{5,201}^{1}$ \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		$w_{1,1}^{1}$ & \dots & $w_{1,201}^{1}$ \\
+	};
+	
+	\begin{scope}[on background layer]
+	\matrix [matrix of nodes, above of = m1, fill=green!10, xshift=10em, node distance = 20em, draw, .style={nodes={draw=none, minimum width=1em}}] (m3)
+	{
+		$w_{5,1}^{10}$ & \dots & $w_{5,201}^{10}$ \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		\dots & \dots & \dots \\
+		
+		$w_{1,1}^{10}$ & \dots & $w_{1,201}^{10}$ \\
+	};
+	\end{scope}
+	
+	\begin{scope}[on background layer]
+		\matrix [matrix of nodes, above of = m1, fill=green!10, xshift=2em, node distance = 5em, draw, .style={nodes={draw=none, minimum width=1em}}] (m2)
+		{
+			$w_{5,1}^{2}$ & \dots & $w_{5,201}^{2}$ \\
+			
+			\dots & \dots & \dots \\
+			
+			\dots & \dots & \dots \\
+			
+			\dots & \dots & \dots \\
+			
+			$w_{1,1}^{2}$ & \dots & $w_{1,201}^{2}$ \\
+		};
+	\end{scope}
+	
+	
+	\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (m3.43) -- (m3.-43) node [black,midway, xshift=5.5em] {\fontsize{25}{10}\selectfont $att_{win}$};
+	
+	\path [line, dotted] (m2.135) to (m3.135);
+	\path [line, dotted] (m2.43) to (m3.43);
+	\path [line, dotted] (m2.-43) to (m3.-43);
+	
+	\node [atts, above of = cnn1, pattern=crosshatch, node distance = 30em, minimum height = 20em, text width=2cm,font=\fontsize{40}{10}\selectfont, xshift=-20em] (b1) {$\beta_{1}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline $\beta_{1}^{10}$} ;
+	
+	\node [atts, right of = b1, pattern=crosshatch, node distance = 30em, minimum height = 20em, text width=2cm,font=\fontsize{40}{10}\selectfont] (b2) {$\beta_{Tx}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline $\beta_{Tx}^{10}$} ;
+	
+	\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (b1.north) -- (b2.north) node [black,midway, yshift=5em] {\fontsize{40}{10}\selectfont Tx};
+	
+	\node [above of = cnn1, yshift=10em, font=\fontsize{40}{10}\selectfont] (eq1) {\rotatebox{90}{$\,=$}};
+	\end{tikzpicture}
+\end{center}
+\end{frame}
+
+		\begin{frame}[fragile]{Location Aware Recurrent Attention - weights}
+	\begin{center}
+		\begin{tikzpicture}[scale = 0.3, every node/.style={transform shape}]
+		\matrix [matrix of nodes, draw, .style={nodes={draw=none, minimum width=1em}}, font=\fontsize{4}{2}\selectfont] (m1)
+		{
+			$\alpha_{1}^{t-5}$ & $\alpha_{2}^{t-5}$ & \dots  & \dots & $\alpha_{i}^{t-5}$ & \dots & \dots & $\alpha_{Tx}^{t-5}$ \\
+			
+			$\alpha_{1}^{t-4}$ & $\alpha_{2}^{t-4}$ & \dots  & \dots & $\alpha_{i}^{t-4}$ & \dots & \dots & $\alpha_{Tx}^{t-4}$ \\
+			
+			$\alpha_{1}^{t-3}$ & $\alpha_{2}^{t-3}$ & \dots  & \dots & $\alpha_{i}^{t-3}$ & \dots & \dots & $\alpha_{Tx}^{t-3}$ \\
+			
+			$\alpha_{1}^{t-2}$ & $\alpha_{2}^{t-2}$ & \dots  & \dots & $\alpha_{i}^{t-2}$ & \dots & \dots & $\alpha_{Tx}^{t-2}$ \\
+			
+			$\alpha_{1}^{t-1}$ & $\alpha_{2}^{t-1}$ & \dots  & \dots & $\alpha_{i}^{t-1}$ & \dots & \dots & $\alpha_{Tx}^{t-1}$ \\
+		};
+		
+		\node [cnn, above of = m1, node distance = 20em] (cnn2) {CNN};
+		\path [line] (m1.north) to (cnn2.south);
+		\matrix [matrix of nodes, draw, above of = m1, node distance = 40em, .style={nodes={draw=none, minimum width=1em}}, font=\fontsize{3}{3}\selectfont, inner sep = 2pt] (m)
+		{
+			$\beta_{1}^{1}$ & $\beta_{1}^{2}$ & \dots  & \dots & $\beta_{1}^{i}$ & \dots & \dots & $\beta_{1}^{Tx}$ \\
+			
+			$\beta_{2}^{1}$ & $\beta_{2}^{2}$ & \dots  & \dots & $\beta_{2}^{i}$ & \dots & \dots & $\beta_{2}^{Tx}$ \\
+			
+			\dots & \dots & \dots  & \dots & \dots & \dots & \dots & \dots \\
+			
+			$\beta_{i}^{1}$ & $\beta_{i}^{2}$ & \dots  & \dots & $\beta_{i}^{i}$ & \dots & \dots & $\beta_{i}^{Tx}$ \\
+			
+			\dots & \dots & \dots  & \dots & \dots & \dots & \dots & \dots \\
+			
+			$\beta_{10}^{1}$ & $\beta_{10}^{2}$ & \dots  & \dots & $\beta_{10}^{i}$ & \dots & \dots & $\beta_{10}^{Tx}$ \\
+		};
+		\path [line] (cnn2.north) to (m.south);
+		\node [mlp_att, right of = m, node distance = 20em, text width = 10em] (maxp) {MaxPool2D};
+		
+		\path [line] (m.east) to (maxp.west);
+		\node [atts, right of = maxp, minimum height = 15em] (betastar) {$\beta_{1}^{\star}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . $\beta_{10}^{\star}$};
+		
+		\path [line] (maxp.east) to (betastar.west);
+		
+		\node [mlp_att, right of=betastar, text width = 10em] (lstm) {$LSTM_{att}$};
+		
+		\path [line] (betastar.east) to (lstm.west);
+		
+		\node [atts, right of=lstm, text width = 2cm, minimum height = 15em] (ht) {$h_{t}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . $h_{t}^{att\_dim}$};
+		
+		\path [line] (lstm.east) to (ht.west);
+		{font=\fontsize{30}{30}\selectfont
+		\node [below of=lstm, node distance = 4em, xshift=-1em] (htm1) {$h_{t-1}$};
+		\node [below of=lstm, node distance = 4em, xshift=1em] (ctm1) {$C_{t-1}$};
+		\node [above of=lstm, node distance = 4em] (ct) {$C_{t}$};
+		}
+		\path [line] (htm1.north) to (lstm.south);
+		\path [line] (ct.south) to (lstm.north);
+		\path [line] (ctm1.north) to (lstm.south);
+		
+		\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (ht.80) -- (ht.-80) node [black,midway, xshift=6.5em] {\fontsize{25}{10}\selectfont $att\_dim$};
+		
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+	\begin{frame}[fragile]{Location Aware Recurrent Attention - Full picture}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
+		\node [enc_h] (h1) {$h_{1}$};
+		\node [enc_h,right of = h1] (h2) {$h_{2}$};
+		\node [enc_h,right of = h2, node distance = 30em] (hi) {$h_{i}$};
+		\node [enc_h,right of = hi, node distance = 30em] (hTx) {$h_{Tx}$};
+		\draw [dotted] (h2.east) to (hi.west);
+		\draw [dotted] (hi.east) to (hTx.west);
+		
+		
+		\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
+		\path [line] (h1.north) to (mlp1.south);
+		\node [enc_h, above of = mlp1] (he1) {};
+		\path [line] (mlp1.north) to (he1.south);
+		
+		
+		\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
+		\path [line] (h2.north) to (mlp2.south);
+		\node [enc_h, above of = mlp2] (he2) {};
+		\path [line] (mlp2.north) to (he2.south);
+		
+		
+		\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
+		\path [line] (hi.north) to (mlpi.south);
+		\node [enc_h, above of = mlpi] (hei) {};
+		\path [line] (mlpi.north) to (hei.south);
+		
+		
+		\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
+		\path [line] (hTx.north) to (mlpTx.south);
+		\node [enc_h, above of = mlpTx] (heTx) {};
+		\path [line] (mlpTx.north) to (heTx.south);
+		
+		\node [draw, rectangle, above of=hei, node distance = 70em,font=\fontsize{40}{10}\selectfont, xshift=-10em] (alpha_t) {$\alpha_{1}^{t-1}$ \hspace{1em} $\alpha_{2}^{t-1}$ \dots \dots \dots $\alpha_{i}^{t-1}$ \dots \dots \dots $\alpha_{Tx}^{t-1}$};
+		
+		\node [cnn, below of=alpha_t, node distance = 10em, text width = 20em, font=\fontsize{40}{40}\selectfont] (cnn1) {CNN, MaxPool2D};
+		
+		\path [line] (alpha_t.south) to (cnn1.north);
+		\node [atts, below of = cnn1, minimum height = 15em, node distance = 15em] (betastar) {$\beta_{1}^{\star}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . $\beta_{10}^{\star}$};
+		
+		\node [mlp_att, below of=betastar, text width = 10em, node distance = 15em] (lstm) {$LSTM_{att}$};
+		\path [line] (cnn1.south) to (betastar.north);
+		\path [line] (betastar.south) to (lstm.north);
+		
+		\node [atts, below of=lstm, text width = 2cm, minimum height = 15em, node distance = 15em] (ht) {$h_{t}^{1}$ \newline . \newline . \newline . \newline . \newline . \newline . \newline . \newline . $h_{t}^{att\_dim}$};
+		
+		\path [line] (lstm.south) to (ht.north);
+	
+		
+		\node [round, above of=heTx, node distance=10em, xshift=10em] (sum1) {$\sum$};
+		
+		\path [line, dotted] (he1.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (he2.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (hei.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (heTx.north) to [bend left=2] (sum1.west);
+		
+		
+		\node [mlp_dec, right of = lstm, node distance = 50em, minimum width = 10em, yshift=30em, font=\fontsize{40}{10}\selectfont] (sim1) {$s_{i-1}$};
+		\node [mlp_dec, below of=sim1, minimum width = 20em, font=\fontsize{40}{10}\selectfont] (dec_z) {decz};
+		\path [line, dotted] (sim1.200) to (dec_z.170);
+		\path [line, dotted] (sim1.-20) to (dec_z.10);
+		\node [mlp_dec, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
+		\path [line] (dec_z) to (mlp_dec);
+		\node [dec_z, below of = mlp_dec] (decz_enc) {};
+		\path [line] (mlp_dec) to (decz_enc);
+
+		\path [line, dotted] (decz_enc.south) to (sum1.north);
+		
+		\path [line, dotted] (ht.east) to [bend left=10] (sum1.110);
+		\node [atts, right of=sum1, node distance = 10em] (asdf) {};
+		\node [mlp_att, right of=asdf] (mlpg) {$MLP_{g}$};
+		\node [right of=mlpg, node distance=15em, font=\fontsize{40}{10}\selectfont] (e1) {$e_1$};
+		
+		\node [below of=e1, node distance=10em, font=\fontsize{40}{10}\selectfont] (e2) {$e_2$};
+		
+		\node [below of=e2, node distance=10em, font=\fontsize{40}{10}\selectfont] (ei) {$e_i$};
+		
+		\node [below of=ei, node distance=10em, font=\fontsize{40}{10}\selectfont] (eTx) {$e_{Tx}$};
+		
+		\node [atts, right of=ei, font=\fontsize{40}{10}\selectfont] (e) {e};
+		
+		\path [line, dotted] (e1.east) to (e.105);
+		\path [line, dotted] (e2.east) to (e.130);
+		\path [line, dotted] (ei.east) to (e.-130);
+		\path [line, dotted] (eTx.east) to (e.-105);
+		
+		\node [mlp_att, right of=e, font=\fontsize{40}{10}\selectfont] (sm) {$\sigma$};
+		\path [line] (e.east) to (sm.west);
+		
+		
+		\node [atts, right of=sm, font=\fontsize{40}{10}\selectfont] (alphas) {$\alpha$};
+		\path [line] (sm.east) to (alphas.west);
+		
+		\path [line, dotted] (sum1.east) to (asdf.west);
+		\path [line, dotted] (sum1.east) to (asdf.west);
+		\path [line, dotted] (asdf.east) to (mlpg.west);
+		\path [line, dotted] (mlpg.east) to (e1.west);
+		\path [line, dotted] (mlpg.east) to (e1.west);
+		\path [line, dotted] (mlpg.east) |- (e2.west);
+		\path [line, dotted] (mlpg.east) |- (ei.west);
+		\path [line, dotted] (mlpg.east) |- (eTx.west);
+		
+		
+		\end{tikzpicture}
+	\end{center}
+	\end{frame}
+\end{document}
