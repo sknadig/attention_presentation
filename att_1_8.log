@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.6)  9 NOV 2018 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.6)  9 NOV 2018 13:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**attlocrec2.tex
-(./attlocrec2.tex
+**att_1_8.tex
+(./att_1_8.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
@@ -1055,8 +1055,8 @@ File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
 l.sty
 Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON t
 echnical note
-) (./attlocrec2.aux)
-\openout1 = `attlocrec2.aux'.
+) (./att_1_8.aux)
+\openout1 = `att_1_8.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
@@ -1153,9 +1153,9 @@ LaTeX Info: Redefining \ref on input line 25.
 LaTeX Info: Redefining \pageref on input line 25.
 LaTeX Info: Redefining \nameref on input line 25.
 
-(./attlocrec2.out) (./attlocrec2.out)
+(./att_1_8.out) (./att_1_8.out)
 \@outlinefile=\write5
-\openout5 = `attlocrec2.out'.
+\openout5 = `att_1_8.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 25.
@@ -1237,99 +1237,1656 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.15} (current compat level: 1.9).
 
-(./attlocrec2.nav)
-\openout4 = `attlocrec2.vrb'.
+(./att_1_8.nav)
+Overfull \vbox (15.63992pt too high) detected at line 31
+ []
 
- (./attlocrec2.vrb
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./att_1_8.toc)
+<iiitb_logo.png, id=92, 1710.39pt x 1415.2875pt>
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 38.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (10.81685pt too high) detected at line 38
+ []
+
+[2
+
+ <./iiitb_logo.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 6.
+line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
+[3
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 17.
+(Font)              size <20.74> substituted on input line 4.
 
-LaTeX Font Info:    Calculating math sizes for size <25> on input line 63.
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 133.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [4
+
+] (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 133.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [5
+
+] (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 133.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [6
+
+] (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 133.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [7
+
+]
+(./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 133.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [8
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+LaTeX Font Info:    Calculating math sizes for size <25> on input line 18.
+
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <12.5> not available
-(Font)              size <12> substituted on input line 63.
+(Font)              size <12> substituted on input line 18.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <12.5> not available
-(Font)              size <12> substituted on input line 63.
+(Font)              size <12> substituted on input line 18.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <12.5> not available
-(Font)              size <12> substituted on input line 63.
+(Font)              size <12> substituted on input line 18.
 
 
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <40> not available
-(Font)              size <42.99> substituted on input line 69.
-
-LaTeX Font Info:    Calculating math sizes for size <40> on input line 69.
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <27.99988> not available
-(Font)              size <29.86> substituted on input line 69.
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
 
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <40> not available
-(Font)              size <24.88> substituted on input line 69.
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 34.
+
+LaTeX Font Info:    Calculating math sizes for size <30> on input line 34.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <30> not available
+(Font)              size <24.88> substituted on input line 34.
 
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <27.99988> not available
-(Font)              size <24.88> substituted on input line 69.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <15> not available
+(Font)              size <14.4> substituted on input line 34.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <30> not available
+(Font)              size <24.88> substituted on input line 34.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 34.
+
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 37.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 37.
+
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 51.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 51.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <20> not available
-(Font)              size <20.74> substituted on input line 69.
+(Font)              size <20.74> substituted on input line 51.
 
 
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <40> not available
-(Font)              size <24.88> substituted on input line 69.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <27.99988> not available
-(Font)              size <24.88> substituted on input line 69.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 51.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 69.
+(Font)              size <20.74> substituted on input line 51.
 
 
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 51.
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[9
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[10
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[11
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[12
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[13
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[14
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[15
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[16
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[17
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[18
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 199.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 199
+ []
+
+[19
+
+] [20
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 21--21
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 268.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.75575pt too high) detected at line 268
+ []
+
+[21
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (2.11617pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/20 s[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 284.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [22
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (2.11617pt too wide) in paragraph at lines 6--6
+ [][][][]$\OT1/mathkerncmss/m/sl/20 s[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 10--10
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 11--11
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 313.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [23
+
+] [24
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 354.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [25
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 354.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [26
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 354.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [27
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 354.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [28
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 354.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [29
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <40> not available
+(Font)              size <42.99> substituted on input line 35.
+
+LaTeX Font Info:    Calculating math sizes for size <40> on input line 35.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <27.99988> not available
+(Font)              size <29.86> substituted on input line 35.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <40> not available
+(Font)              size <24.88> substituted on input line 35.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <27.99988> not available
+(Font)              size <24.88> substituted on input line 35.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <40> not available
+(Font)              size <24.88> substituted on input line 35.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <27.99988> not available
+(Font)              size <24.88> substituted on input line 35.
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [30
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [31
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [32
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [33
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [34
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [35
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [36
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [37
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [38
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 631.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [39
+
+] [40
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [41
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [42
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [43
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [44
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [45
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [46
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [47
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [48
+
+] (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 780.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [49
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 36--36
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 39--39
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 913.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [50
+
+] [51
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 988.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [52
+
+] (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 988.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [53
+
+] (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 988.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [54
+
+]
+(./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 988.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (34.66286pt too high) detected at line 988
+ []
+
+[55
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (6.29712pt too wide) in paragraph at lines 40--40
+ [][][][]$\OML/cmm/m/it/20.74 ^^L[]\OT1/mathkerncmss/m/sl/20 x$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 60--60
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 63--63
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (20.60886pt too wide) in paragraph at lines 118--119
+ [] 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1109.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (32.98428pt too high) detected at line 1109
+ []
+
+[56
+
+] [57
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
 Overfull \hbox (27.65874pt too wide) in paragraph at lines 76--77
  [] 
  []
 
 )
-<iiitb_logo.png, id=39, 1710.39pt x 1415.2875pt>
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 110.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1191.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (16.13136pt too high) detected at line 110
+Overfull \vbox (16.13136pt too high) detected at line 1191
  []
 
-[1
+[58
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./iiitb_logo.png>]
-\openout4 = `attlocrec2.vrb'.
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
 
 
-(./attlocrec2.vrb
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 12--12
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 18--18
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 24--24
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 30--30
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (6.29712pt too wide) in paragraph at lines 42--42
+ [][][][]$\OML/cmm/m/it/20.74 ^^L[]\OT1/mathkerncmss/m/sl/20 x$ 
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 62--62
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 65--65
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (20.60886pt too wide) in paragraph at lines 120--121
+ [] 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1315.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (32.96323pt too high) detected at line 1315
+ []
+
+[59
+
+] [60
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (27.65874pt too wide) in paragraph at lines 76--77
+ [] 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1397.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (16.13136pt too high) detected at line 1397
+ []
+
+[61
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
 LaTeX Font Info:    Calculating math sizes for size <4> on input line 6.
 
 
@@ -1393,60 +2950,26 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2.09999> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <1.5> not available
 (Font)              size <5> substituted on input line 21.
 
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 37.
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 37.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 37.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 37.
-
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
-LaTeX Font Info:    Calculating math sizes for size <30> on input line 49.
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 49.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <30> not available
-(Font)              size <24.88> substituted on input line 49.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <15> not available
-(Font)              size <14.4> substituted on input line 49.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <30> not available
-(Font)              size <24.88> substituted on input line 49.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 49.
-
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 172.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1459.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (15.4817pt too high) detected at line 172
+Overfull \vbox (15.4817pt too high) detected at line 1459
  []
 
-[2
+[62
 
 ]
-\openout4 = `attlocrec2.vrb'.
+\openout4 = `att_1_8.vrb'.
 
- (./attlocrec2.vrb
+ (./att_1_8.vrb
 Overfull \hbox (4.46269pt too wide) in paragraph at lines 7--7
  [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
  []
@@ -1489,61 +3012,393 @@ Overfull \hbox (20.61356pt too wide) in paragraph at lines 105--106
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 280.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1567.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (32.98428pt too high) detected at line 280
+Overfull \vbox (32.98428pt too high) detected at line 1567
  []
 
-[3
+[63
+
+] [64
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 4--4
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 5--5
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 6--6
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1604.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (6.02611pt too high) detected at line 1604
+ []
+
+[65
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 4--4
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 6--6
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 8--8
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1642.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (6.02608pt too high) detected at line 1642
+ []
+
+[66
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 8--8
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 13--13
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 19--19
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 25--25
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 31--31
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 37--37
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 39--39
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 41--41
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 78--78
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 81--81
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1772.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (26.1541pt too high) detected at line 1772
+ []
+
+[67
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 6--6
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 7--7
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 8--8
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <60> not available
+(Font)              size <51.59> substituted on input line 11.
+
+LaTeX Font Info:    Calculating math sizes for size <60> on input line 11.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <41.99982> not available
+(Font)              size <42.99> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <60> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <41.99982> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <60> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <41.99982> not available
+(Font)              size <24.88> substituted on input line 11.
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1809.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (31.45172pt too high) detected at line 1809
+ []
+
+[68
+
+] [69
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 4--4
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 5--5
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 6--6
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1849.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [70
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 5--5
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 7--7
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 9--9
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1891.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [71
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (4.46269pt too wide) in paragraph at lines 8--8
+ [][][][]$\OT1/mathkerncmss/m/sl/25 h[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 13--13
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 19--19
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 25--25
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 31--31
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 39--39
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 41--41
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 43--43
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (17.3838pt too wide) in paragraph at lines 82--82
+ [][][][]\OT1/cmss/m/n/42.99 decz 
+ []
+
+
+Overfull \hbox (2.5458pt too wide) in paragraph at lines 85--85
+ [][][][]$\OT1/mathkerncmss/m/sl/20 MLP[]$ 
+ []
+
+
+Overfull \hbox (24.34282pt too wide) in paragraph at lines 130--131
+ [] 
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 2026.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (32.95232pt too high) detected at line 2026
+ []
+
+[72
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 7--7
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 8--8
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+
+Overfull \hbox (1.86858pt too wide) in paragraph at lines 9--9
+ \OML/cmm/m/it/20.74 []$  
+ []
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 2065.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (31.45172pt too high) detected at line 2065
+ []
+
+[73
 
 ]
 \tf@nav=\write6
-\openout6 = `attlocrec2.nav'.
+\openout6 = `att_1_8.nav'.
 
 \tf@toc=\write7
-\openout7 = `attlocrec2.toc'.
+\openout7 = `att_1_8.toc'.
 
 \tf@snm=\write8
-\openout8 = `attlocrec2.snm'.
+\openout8 = `att_1_8.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
- (./attlocrec2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
-Package rerunfilecheck Info: File `attlocrec2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2067.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2067.
+ (./att_1_8.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2067.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2067.
+
+Package rerunfilecheck Info: File `att_1_8.out' has not changed.
+(rerunfilecheck)             Checksum: 21798058A4DB05C5FD30212F2DFB96D4;553.
 
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 15.12pt have occurred.
+(Font)              up to 35.12pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 34596 strings out of 492982
- 848617 string characters out of 6134896
- 1123272 words of memory out of 5000000
- 37455 multiletter control sequences out of 15000+600000
- 29994 words of font info for 111 fonts, out of 8000000 for 9000
+ 35748 strings out of 492982
+ 867651 string characters out of 6134896
+ 1134717 words of memory out of 5000000
+ 38331 multiletter control sequences out of 15000+600000
+ 39969 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,98p,1934b,1145s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,16n,98p,1931b,1144s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmssi17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy5.pfb>
-Output written on attlocrec2.pdf (3 pages, 298281 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssi17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on att_1_8.pdf (73 pages, 571171 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 224 words of extra memory for PDF output out of 10000 (max. 10000000)
 

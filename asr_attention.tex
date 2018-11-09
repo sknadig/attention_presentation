@@ -19,18 +19,13 @@
 %\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
 \usepackage{tikz}
-\usetikzlibrary{shapes,shadows,arrows}
+\usetikzlibrary{shapes,shadows,arrows, patterns}
 
 
-
+\input{tikz_styles.tex}
 
 \begin{document}
-\tikzstyle{mlp_enc} = [rectangle, draw, fill=blue!50, text width=5em, minimum height=5em, text centered, node distance=10em]
-\tikzstyle{line} = [draw, -latex']
-\tikzstyle{ellipse} = [draw, ellipse, fill=red!50, minimum height=4em]
-\tikzstyle{round} = [draw, circle, fill=green!50, minimum size=4em, node distance=4em]
-\tikzstyle{block} = [draw, rectangle, fill=blue!50]
-\tikzstyle{hidden} = [rectangle, draw, fill=red!50, text width=1em, minimum height=10em, minimum width=3em, text centered, node distance=10em]
+
 \maketitle
 \begin{frame}{Table of contents}
 \setbeamertemplate{section in toc}[sections numbered]
@@ -149,10 +144,10 @@
 				\path [line, dotted] (LSTM_N_Tx.200) to (LSTM_N_Tx.200-|LSTM_N_i.east);
 				
 				
-				\node [hidden, above of = LSTM_N_1] (h1) {$h_{1}$};
-				\node [hidden,above of = LSTM_N_2] (h2) {$h_{2}$};
-				\node [hidden,above of = LSTM_N_i] (hi) {$h_{i}$};
-				\node [hidden,above of = LSTM_N_Tx] (hTx) {$h_{Tx}$};
+				\node [enc_h, above of = LSTM_N_1] (h1) {$h_{1}$};
+				\node [enc_h,above of = LSTM_N_2] (h2) {$h_{2}$};
+				\node [enc_h,above of = LSTM_N_i] (hi) {$h_{i}$};
+				\node [enc_h,above of = LSTM_N_Tx] (hTx) {$h_{Tx}$};
 
 				\draw [dotted] (h2.east) to (hi.west);
 				\draw [dotted] (hi.east) to (hTx.west);
@@ -165,7 +160,7 @@
 				
 				\pause{}
 				\fontsize{15}{12}
-				\node [round, above of = h1, node distance = 15em, xshift=17em] (sum1) {$\sum$};
+				\node [round, above of = h1, node distance = 12em, xshift=17em] (sum1) {$\sum$};
 				
 				\pause{}
 				\path [line] (h1.north) to [bend left=45] node [xshift=2em] {$\alpha_{1}$} (sum1.west);
@@ -177,17 +172,17 @@
 				\path [line] (hTx.north) to [bend right=45] node [xshift=2em] {$\alpha_{Tx}$} (sum1.east);
 
 				\pause{}
-				\node [hidden, above of = sum1, fill=red!20] (ci) {$c_{i}$};
+				\node [enc_h, above of = sum1, fill=black!20] (ci) {$c_{i}$};
 				
 				\path [line] (sum1) to (ci.south);
 				
 				\pause{}
-				\node [mlp_enc, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
+				\node [mlp_dec, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
 				\node [above of = decoder_tm1, node distance = 5em, xshift = 8em] (ytm1) {$y_{t-1}$};
 				\path [line, dotted] (decoder_tm1) to (ytm1);
 				\pause{}
 				\pause{}
-				\node [mlp_enc, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
+				\node [mlp_dec, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
 				\path [line] (decoder_tm1.east) to (decoder_t.west);
 				\path [line] (ci.north) to [bend left=45] (decoder_t.west);
 				\path [line, dotted] (ytm1) to (decoder_t.west);
@@ -215,10 +210,10 @@
 		\path [line, dotted] (LSTM_N_Tx.200) to (LSTM_N_Tx.200-|LSTM_N_i.east);
 		
 		
-		\node [hidden, above of = LSTM_N_1] (h1) {$h_{1}$};
-		\node [hidden,above of = LSTM_N_2] (h2) {$h_{2}$};
-		\node [hidden,above of = LSTM_N_i] (hi) {$h_{i}$};
-		\node [hidden,above of = LSTM_N_Tx] (hTx) {$h_{Tx}$};
+		\node [enc_h, above of = LSTM_N_1] (h1) {$h_{1}$};
+		\node [enc_h,above of = LSTM_N_2] (h2) {$h_{2}$};
+		\node [enc_h,above of = LSTM_N_i] (hi) {$h_{i}$};
+		\node [enc_h,above of = LSTM_N_Tx] (hTx) {$h_{Tx}$};
 		
 		\path [line] (LSTM_N_1) to (h1);
 		\path [line] (LSTM_N_2) to (h2);
@@ -230,7 +225,7 @@
 		
 		
 		\fontsize{15}{12}
-		\node [round, above of = h1, node distance = 15em, xshift=17em] (sum1) {$\sum$};
+		\node [round, above of = h1, node distance = 12em, xshift=17em] (sum1) {$\sum$};
 		
 		
 		\path [line] (h1.north) to [bend left=45] node [xshift=2em] {$1/T_x$} (sum1.west);
@@ -242,17 +237,17 @@
 		\path [line] (hTx.north) to [bend right=45] node [xshift=2em] {$1/T_x$} (sum1.east);
 		
 		
-		\node [hidden, above of = sum1, fill=red!20] (ci) {$c_{i}$};
+		\node [atts, above of = sum1, fill=black!20] (ci) {$c_{i}$};
 		
 		\path [line] (sum1) to (ci.south);
 		
 		
-		\node [mlp_enc, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
+		\node [mlp_dec, above of = ci, xshift = -8em, yshift = 3em] (decoder_tm1) {$s_{t-1}$};
 		\node [above of = decoder_tm1, node distance = 5em, xshift = 8em] (ytm1) {$y_{t-1}$};
 		\path [line, dotted] (decoder_tm1) to (ytm1);
 		
 		
-		\node [mlp_enc, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
+		\node [mlp_dec, right of = decoder_tm1, xshift = 8em] (decoder_t) {$s_{t}$};
 		\path [line] (decoder_tm1.east) to (decoder_t.west);
 		\path [line] (ci.north) to [bend left=45] (decoder_t.west);
 		\path [line, dotted] (ytm1) to (decoder_t.west);
@@ -266,13 +261,13 @@
 	\begin{frame}[fragile]{Dimensions of representations}
 	\begin{center}
 		\begin{tikzpicture}[scale=0.8, every node/.style={transform shape}]
-			\node [hidden] (h1) {$h_{i}$};
+			\node [enc_h] (h1) {$h_{i}$};
 			\draw [decorate,decoration={brace,amplitude=5pt, mirror, raise=2em}] (h1.south) -- (h1.north) node [black,midway,xshift=5em] {eproj};
 			
-			\node [hidden, right of=h1, node distance = 10em, fill=red!20, minimum height = 15em] (dec_z) {$s_{i-1}$};
+			\node [dec_z, right of=h1, node distance = 10em, minimum height = 15em] (dec_z) {$s_{i-1}$};
 			\draw [decorate,decoration={brace,amplitude=5pt, mirror, raise=2em}] (dec_z.south) -- (dec_z.north) node [black,midway,xshift=5em] {dunits};
 			
-			\node [hidden, right of=dec_z, node distance = 10em, fill=green!20, minimum height = 8em] (alpha) {w};
+			\node [atts, right of=dec_z, node distance = 10em, minimum height = 8em] (alpha) {w};
 			\draw [decorate,decoration={brace,amplitude=5pt, mirror, raise=2em}] (alpha.south) -- (alpha.north) node [black,midway,xshift=5em] {adim};
 			\node [below of=dec_z, node distance = 10em] {Mostly $ eproj \ne dunits \ne adim $};
 		\end{tikzpicture}
@@ -282,323 +277,28 @@
 	\begin{frame}[fragile]{Matching the dimensions of representations}
 	\begin{center}
 		\begin{tikzpicture}[scale=0.4, every node/.style={transform shape}]
-			\node [hidden] (h1) {$h_{i}$};
+			\node [enc_h] (h1) {$h_{i}$};
 		
-			\node [hidden, right of=h1, node distance = 10em, fill=red!20, minimum height = 15em, yshift=2.5em] (dec_z) {$s_{i-1}$};
+			\node [dec_z, right of=h1, node distance = 10em, minimum height = 15em, yshift=2.5em] (dec_z) {$s_{i-1}$};
 			
-			\node [hidden, right of=dec_z, node distance = 10em, fill=green!20, minimum height = 8em, yshift=-3.5em] (alpha) {w};
+			\node [atts, right of=dec_z, node distance = 10em, minimum height = 8em, yshift=-3.5em] (alpha) {w};
 			
 			\node [mlp_enc, below of=h1, node distance = 15em] (mlp_enc) {$MLP_{enc}$};
-			\node [mlp_enc, right of=mlp_enc, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
-			\node [mlp_enc, right of=mlp_dec, node distance = 10em] (mlp_att) {$MLP_{att}$};
+			\node [mlp_dec, right of=mlp_enc, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
+			\node [mlp_att, right of=mlp_dec, node distance = 10em] (mlp_att) {$MLP_{att}$};
 			
 			\path [line] (h1.south) to (mlp_enc.north);
 			\path [line] (dec_z.south) to (mlp_dec.north);
 			\path [line] (alpha.south) to (mlp_att.north);
 			
-			\node [hidden, below of=mlp_enc, node distance = 10em] (h_att) {};
-			\node [hidden, below of=mlp_dec, node distance = 10em] (z_att) {};
-			\node [hidden, below of=mlp_att, node distance = 10em] (alpha_att) {};
+			\node [enc_h, below of=mlp_enc, node distance = 10em] (h_att) {};
+			\node [enc_h, below of=mlp_dec, node distance = 10em] (z_att) {};
+			\node [enc_h, below of=mlp_att, node distance = 10em] (alpha_att) {};
 			
 			\path [line] (mlp_enc.south) to (h_att.north);
 			\path [line] (mlp_dec.south) to (z_att.north);
 			\path [line] (mlp_att.south) to (alpha_att.north);
 			\draw [decorate,decoration={brace,amplitude=5pt, mirror, raise=1em}] (alpha_att.south) -- (alpha_att.north) node [black,midway,xshift=5em] {adim};
-		\end{tikzpicture}
-	\end{center}
-	\end{frame}
-
-	\begin{frame}[fragile]{Dot product Attention}
-	\begin{center}
-		\begin{tikzpicture}[scale=0.3, every node/.style={transform shape}]
-				\node [hidden] (h1) {$h_{1}$};
-				\node [hidden,right of = h1] (h2) {$h_{2}$};
-				\node [hidden,right of = h2, node distance = 30em] (hi) {$h_{i}$};
-				\node [hidden,right of = hi, node distance = 30em] (hTx) {$h_{Tx}$};
-				\draw [dotted] (h2.east) to (hi.west);
-				\draw [dotted] (hi.east) to (hTx.west);
-				\pause{}
-				
-				\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
-					\path [line] (h1.north) to (mlp1.south);
-				\node [hidden, above of = mlp1, minimum height = 12em, node distance = 12em, fill=green!10] (he1) {};
-				\path [line] (mlp1.north) to (he1.south);
-				
-				\pause{}
-				\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
-				\path [line] (h2.north) to (mlp2.south);
-				\node [hidden, above of = mlp2, minimum height = 12em, node distance = 12em, fill=green!10] (he2) {};
-				\path [line] (mlp2.north) to (he2.south);
-				
-				\pause{}
-				\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
-				\path [line] (hi.north) to (mlpi.south);
-				\node [hidden, above of = mlpi, minimum height = 12em, node distance = 12em, fill=green!10] (hei) {};
-				\path [line] (mlpi.north) to (hei.south);
-				
-				\pause{}
-				\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
-				\path [line] (hTx.north) to (mlpTx.south);
-				\node [hidden, above of = mlpTx, minimum height = 12em, node distance = 12em, fill=green!10] (heTx) {};
-				\path [line] (mlpTx.north) to (heTx.south);
-		\end{tikzpicture}
-		
-	\end{center}
-	\end{frame}
-
-	\begin{frame}[fragile]{Dot product Attention}
-	\begin{center}
-		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
-		\node [hidden] (h1) {$h_{1}$};
-		\node [hidden,right of = h1] (h2) {$h_{2}$};
-		\node [hidden,right of = h2, node distance = 30em] (hi) {$h_{i}$};
-		\node [hidden,right of = hi, node distance = 30em] (hTx) {$h_{Tx}$};
-		\draw [dotted] (h2.east) to (hi.west);
-		\draw [dotted] (hi.east) to (hTx.west);
-		
-		
-		\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
-		\path [line] (h1.north) to (mlp1.south);
-		\node [hidden, above of = mlp1, minimum height = 12em, node distance = 12em, fill=green!10] (he1) {};
-		\path [line] (mlp1.north) to (he1.south);
-		
-		
-		\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
-		\path [line] (h2.north) to (mlp2.south);
-		\node [hidden, above of = mlp2, minimum height = 12em, node distance = 12em, fill=green!10] (he2) {};
-		\path [line] (mlp2.north) to (he2.south);
-		
-		
-		\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
-		\path [line] (hi.north) to (mlpi.south);
-		\node [hidden, above of = mlpi, minimum height = 12em, node distance = 12em, fill=green!10] (hei) {};
-		\path [line] (mlpi.north) to (hei.south);
-		
-		
-		\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
-		\path [line] (hTx.north) to (mlpTx.south);
-		\node [hidden, above of = mlpTx, minimum height = 12em, node distance = 12em, fill=green!10] (heTx) {};
-		\path [line] (mlpTx.north) to (heTx.south);
-		
-		\node [mlp_enc, fill=blue!30, above of = hei, node distance = 60em, minimum width = 10em, xshift = -10em] (sim1) {$s_{i-1}$};
-		\node [mlp_enc, fill=blue!30 , below of=sim1, minimum width = 20em] (dec_z) {decz};
-		\node [mlp_enc, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
-		\path [line] (dec_z) to (mlp_dec);
-		\node [hidden, below of = mlp_dec, minimum height = 12em, node distance = 12em, fill=green!10] (decz_enc) {};
-		\path [line] (mlp_dec) to (decz_enc);
-		
-		\node [round, below of = decz_enc, node distance = 15em] (prod) {$\circ$}; 
-		
-		\pause{}
-		\path [line, dotted] (he1.north) to [bend left=15] (prod.west);
-		\path [line, dotted] (decz_enc.south) to (prod.north);
-		
-		\node [hidden, right of = prod, minimum height = 12em, node distance = 20em, yshift=10em, fill=green!40] (h_z) {};
-		\path [line, dotted] (prod.east) to [bend left=45] (h_z.west);
-		
-		\pause{}
-		\node [round, right of = h_z, node distance = 15em] (sum) {$\sum$};
-		\path [line, dotted] (h_z.east) to (sum.west);
-		
-		\pause{}
-		\node [right of=sim1, node distance = 15em, xshift=30em] (e1) {$e_{1}$};
-		\path [line, dotted] (sum.north) |- (e1.west);
-		
-		\pause{}
-		\node [below of=e1, node distance = 5em] (e2) {$e_{2}$};
-		\path [line, dotted] (he2.north) to [bend left=15] (prod.west);
-		\path [line, dotted] (sum.north) |- (e2.west);
-		
-		\pause{}
-		\node [below of=e2, node distance = 10em] (ei) {$e_{i}$};
-		\path [line, dotted] (hei.north) to [bend right=45] (prod.east);
-		\path [line, dotted] (sum.north) |- (ei.west);
-		
-		\pause{}
-		\node [below of=ei, node distance = 10em] (eTx) {$e_{Tx}$};
-		\path [line, dotted] (heTx.north) to [bend right=15] (prod.east);
-		\path [line, dotted] (sum.north) |- (eTx.west);
-		
-		\pause{}
-		\node [hidden, right of=ei] (e) {e};
-		
-		\pause{}
-		\path [line, dotted] (e1.east) to (e.105);
-		\path [line, dotted] (e2.east) to (e.130);
-		\path [line, dotted] (ei.east) to (e.-130);
-		\path [line, dotted] (eTx.east) to (e.-105);
-		
-		\pause{}
-		\node [mlp_enc, right of=e] (sm) {Softmax};
-		\path [line] (e.east) to (sm.west);
-		
-		\pause{}
-		\node [hidden, right of=sm] (alphas) {$\alpha$};
-		\path [line] (sm.east) to (alphas.west);
-		
-		\pause{}
-		\node [round, right of=sum, node distance=20em] (alpha_h) {$\circ$};
-		\path [line, dotted, color=red] (he1.north) to [bend left=10] (alpha_h.west);
-		\path [line, dotted, color=red] (alphas.south) to [bend right=15] node [xshift=2em] {$\alpha_{1}$} (alpha_h.north);
-		
-		\pause{}
-		\node [hidden, right of=alpha_h] (ahe1) {1};
-		\path [line, dotted, color=red] (alpha_h.east) to (ahe1.west);
-		
-		\pause{}
-		\path [line, dotted, color=red] (he2.north) to [bend left=10] (alpha_h.west);
-		\node [hidden, below of=ahe1, node distance = 15em] (ahe2) {2};
-		\path [line, dotted, color=red] (alpha_h.east) |- (ahe2.west);
-		
-		\pause{}
-		\path [line, dotted, color=red] (hei.north) to [bend left=10] (alpha_h.west);
-		\node [hidden, below of=ahe2, node distance = 15em] (ahei) {i};
-		\path [line, dotted, color=red] (alpha_h.east) |- (ahei.west);
-		
-		\pause{}
-		\path [line, dotted, color=red] (heTx.north) to [bend left=10] (alpha_h.west);
-		\node [hidden, below of=ahei, node distance = 15em] (aheTx) {Tx};
-		\path [line, dotted, color=red] (alpha_h.east) |- (aheTx.west);
-		
-		\pause{}
-		\node [round, right of=ahe2, yshift=-7.5em, node distance = 15em] (sum_op) {$\sum$};
-		\path [line, dotted, color=blue] (ahe1.east) to (sum_op.west);
-		\path [line, dotted, color=blue] (ahe2.east) to (sum_op.west);
-		\path [line, dotted, color=blue] (ahei.east) to (sum_op.west);
-		\path [line, dotted, color=blue] (aheTx.east) to (sum_op.west);
-		
-		\pause{}
-		\node [hidden, right of=sum_op, node distance=15em] (ci) {$c_i$};
-		\path [line] (sum_op.east) to (ci.west);
-		\end{tikzpicture}
-	\end{center}
-	\end{frame}
-
-	\begin{frame}[fragile]{Additive Attention}
-	\begin{center}
-		\begin{tikzpicture}[scale=0.2, every node/.style={transform shape}]
-			\node [hidden] (h1) {$h_{1}$};
-			\node [hidden,right of = h1] (h2) {$h_{2}$};
-			\node [hidden,right of = h2, node distance = 30em] (hi) {$h_{i}$};
-			\node [hidden,right of = hi, node distance = 30em] (hTx) {$h_{Tx}$};
-			\draw [dotted] (h2.east) to (hi.west);
-			\draw [dotted] (hi.east) to (hTx.west);
-			
-			
-			\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
-			\path [line] (h1.north) to (mlp1.south);
-			\node [hidden, above of = mlp1, minimum height = 12em, node distance = 12em, fill=green!10] (he1) {};
-			\path [line] (mlp1.north) to (he1.south);
-			
-			
-			\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
-			\path [line] (h2.north) to (mlp2.south);
-			\node [hidden, above of = mlp2, minimum height = 12em, node distance = 12em, fill=green!10] (he2) {};
-			\path [line] (mlp2.north) to (he2.south);
-			
-			
-			\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
-			\path [line] (hi.north) to (mlpi.south);
-			\node [hidden, above of = mlpi, minimum height = 12em, node distance = 12em, fill=green!10] (hei) {};
-			\path [line] (mlpi.north) to (hei.south);
-			
-			
-			\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
-			\path [line] (hTx.north) to (mlpTx.south);
-			\node [hidden, above of = mlpTx, minimum height = 12em, node distance = 12em, fill=green!10] (heTx) {};
-			\path [line] (mlpTx.north) to (heTx.south);
-			
-			\node [mlp_enc, fill=blue!30, above of = hei, node distance = 60em, minimum width = 10em, xshift = -10em] (sim1) {$s_{i-1}$};
-			\node [mlp_enc, fill=blue!30 , below of=sim1, minimum width = 20em] (dec_z) {decz};
-			\node [mlp_enc, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
-			\path [line] (dec_z) to (mlp_dec);
-			\node [hidden, below of = mlp_dec, minimum height = 12em, node distance = 12em, fill=green!10] (decz_enc) {};
-			\path [line] (mlp_dec) to (decz_enc);
-			
-			\node [round, below of = decz_enc, node distance = 15em] (prod) {$\sum$}; 
-			
-			\pause{}
-			\path [line, dotted] (he1.north) to [bend left=15] (prod.west);
-			\path [line, dotted] (decz_enc.south) to (prod.north);
-			
-			\node [hidden, right of = prod, minimum height = 12em, node distance = 20em, yshift=10em, fill=green!40] (h_z) {};
-			\path [line, dotted] (prod.east) to [bend left=45] (h_z.west);
-			
-			\pause{}
-			\node [mlp_enc, right of=h_z, node distance = 15em] (mlp_g) {$MLP_{g}$};
-			\path [line, dotted] (h_z.east) to (mlp_g.west);
-			
-			
-			\pause{}
-			\node [right of=sim1, node distance = 20em, xshift=30em] (e1) {$e_{1}$};
-			\path [line, dotted] (mlp_g.north) |- (e1.west);
-			
-			\pause{}
-			\node [below of=e1, node distance = 5em] (e2) {$e_{2}$};
-			\path [line, dotted] (he2.north) to [bend left=15] (prod.west);
-			\path [line, dotted] (mlp_g.north) |- (e2.west);
-			
-			\pause{}
-			\node [below of=e2, node distance = 10em] (ei) {$e_{i}$};
-			\path [line, dotted] (hei.north) to [bend right=45] (prod.east);
-			\path [line, dotted] (mlp_g.north) |- (ei.west);
-			
-			\pause{}
-			\node [below of=ei, node distance = 10em] (eTx) {$e_{Tx}$};
-			\path [line, dotted] (heTx.north) to [bend right=15] (prod.east);
-			\path [line, dotted] (mlp_g.north) |- (eTx.west);
-			
-			\pause{}
-			\node [hidden, right of=ei] (e) {e};
-			
-			\pause{}
-			\path [line, dotted] (e1.east) to (e.105);
-			\path [line, dotted] (e2.east) to (e.130);
-			\path [line, dotted] (ei.east) to (e.-130);
-			\path [line, dotted] (eTx.east) to (e.-105);
-			
-			\pause{}
-			\node [mlp_enc, right of=e] (sm) {Softmax};
-			\path [line] (e.east) to (sm.west);
-			
-			\pause{}
-			\node [hidden, right of=sm] (alphas) {$\alpha$};
-			\path [line] (sm.east) to (alphas.west);
-			
-			\pause{}
-			\node [round, right of=sum, node distance=20em] (alpha_h) {$\circ$};
-			\path [line, dotted, color=red] (he1.north) to [bend left=10] (alpha_h.west);
-			\path [line, dotted, color=red] (alphas.south) to [bend right=15] node [xshift=2em] {$\alpha_{1}$} (alpha_h.north);
-			
-			\pause{}
-			\node [hidden, right of=alpha_h] (ahe1) {1};
-			\path [line, dotted, color=red] (alpha_h.east) to (ahe1.west);
-			
-			\pause{}
-			\path [line, dotted, color=red] (he2.north) to [bend left=10] (alpha_h.west);
-			\node [hidden, below of=ahe1, node distance = 15em] (ahe2) {2};
-			\path [line, dotted, color=red] (alpha_h.east) |- (ahe2.west);
-			
-			\pause{}
-			\path [line, dotted, color=red] (hei.north) to [bend left=10] (alpha_h.west);
-			\node [hidden, below of=ahe2, node distance = 15em] (ahei) {i};
-			\path [line, dotted, color=red] (alpha_h.east) |- (ahei.west);
-			
-			\pause{}
-			\path [line, dotted, color=red] (heTx.north) to [bend left=10] (alpha_h.west);
-			\node [hidden, below of=ahei, node distance = 15em] (aheTx) {Tx};
-			\path [line, dotted, color=red] (alpha_h.east) |- (aheTx.west);
-			
-			\pause{}
-			\node [round, right of=ahe2, yshift=-7.5em, node distance = 15em] (sum_op) {$\sum$};
-			\path [line, dotted, color=blue] (ahe1.east) to (sum_op.west);
-			\path [line, dotted, color=blue] (ahe2.east) to (sum_op.west);
-			\path [line, dotted, color=blue] (ahei.east) to (sum_op.west);
-			\path [line, dotted, color=blue] (aheTx.east) to (sum_op.west);
-			
-			\pause{}
-			\node [hidden, right of=sum_op, node distance=15em] (ci) {$c_i$};
-			\path [line] (sum_op.east) to (ci.west);
 		\end{tikzpicture}
 	\end{center}
 	\end{frame}

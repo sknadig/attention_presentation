@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.6)  7 NOV 2018 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.6)  9 NOV 2018 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1934,10 +1934,10 @@ Package rerunfilecheck Info: File `attdot.out' has not changed.
 (rerunfilecheck)             Checksum: 45116CF6FF4A32AC7062E356300B3D4F;88.
  ) 
 Here is how much of TeX's memory you used:
- 33651 strings out of 492982
- 830388 string characters out of 6134896
- 1085550 words of memory out of 5000000
- 36444 multiletter control sequences out of 15000+600000
+ 33655 strings out of 492982
+ 830445 string characters out of 6134896
+ 1085899 words of memory out of 5000000
+ 36448 multiletter control sequences out of 15000+600000
  31954 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,14n,98p,1930b,901s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1951,7 +1951,7 @@ s/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmssi17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb>
-Output written on attdot.pdf (19 pages, 338378 bytes).
+Output written on attdot.pdf (19 pages, 338464 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  150 compressed objects within 2 object streams

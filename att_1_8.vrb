@@ -1,0 +1,35 @@
+\frametitle{Coverage mechanism location aware Attention}
+\begin{center}
+	\begin{tikzpicture}[scale=0.3, every node/.style={transform shape, font=\fontsize{40}{40}\selectfont}]
+
+	\node [draw] (ht) {$h_{1}^{t}$ \dots \dots $h_{i}^{t}$ \dots \dots $h_{Tx}^{t}$};
+
+	\node [atts, below of = ht, xshift=-20em, node distance = 20em] (alpha1) {$\alpha_{1}^{1}$ \newline . \newline . \newline . \newline $\alpha_{i}^{1}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{1}$ \newline};
+	\node [atts, right of=alpha1, minimum height = 12em] (alpha2) {$\alpha_{1}^{2}$ \newline . \newline . \newline . \newline $\alpha_{i}^{2}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{2}$ \newline};
+	\node [atts, right of=alpha2, node distance = 15em, minimum height = 12em] (alphai) {$\alpha_{1}^{i}$ \newline . \newline . \newline . \newline $\alpha_{i}^{i}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{i}$ \newline};
+	\node [atts, right of=alphai, node distance = 15em, minimum height = 12em, text width = 1.5cm] (alphaTx) {$\alpha_{1}^{t-1}$ \newline . \newline . \newline . \newline $\alpha_{i}^{t-1}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{t-1}$ \newline};
+
+	\node [mlp_att, below of= alphai, xshift=-8em, font=\fontsize{60}{60}\selectfont, text width = 5cm, node distance = 15em] (attcov) {$f_{AttCov}$};
+
+	\node [draw, below of = attcov, node distance = 10em] (alphastar) {$\alpha_{1}^{t}$ $\alpha_{2}^{t}$ \dots \dots $\alpha_{i}^{t}$ \dots \dots $\alpha_{Tx}^{t}$};
+
+	\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em, mirror}] (alpha1.south) -- (alphaTx.south) node [black,midway, yshift = -2.5em] (t) {};
+
+	\path [line] (t.south) to (attcov.north);
+
+	\path [line] (ht.south) to [bend left=10] (attcov.45);
+	\path [line] (attcov.south) to (alphastar);
+
+	\node [atts, right of=alphaTx,pattern color= orange!20, node distance = 15em, minimum height = 12em, text width = 1.5cm] (alphat) {$\alpha_{1}^{t}$ \newline . \newline . \newline . \newline $\alpha_{i}^{t}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{t}$ \newline};
+
+	\path [line] (attcov.south) to [bend right=45](alphat.south);
+	\node [round, below of=alphastar, node distance = 10em] (dot) {$\circ$};
+	\path [line] (ht.south) to [bend right=60](dot.north);
+	\path [line] (alphastar.south) to (dot.north);
+
+	\node [draw, below of = dot, node distance = 10em] (ct) {$C_{t}$};
+
+	\path [line] (dot.south) to (ct.north);
+
+	\end{tikzpicture}
+\end{center}
