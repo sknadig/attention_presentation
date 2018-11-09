@@ -6,4 +6,8 @@
 \beamer@sectionintoc {6}{2D Location Aware Attention}{57}{0}{6}
 \beamer@sectionintoc {7}{Location Aware Recurrent Attention}{60}{0}{7}
 \beamer@sectionintoc {8}{Coverage mechanism Attention}{64}{0}{8}
-\beamer@sectionintoc {9}{Coverage mechanism location aware Attention}{69}{0}{9}
+\beamer@sectionintoc {9}{Coverage mechanism location aware Attention}{70}{0}{9}
+\beamer@sectionintoc {10}{Multi-Head Attention}{75}{0}{10}
+\beamer@sectionintoc {11}{Multi Head Dot Product Attention}{82}{0}{11}
+\beamer@sectionintoc {12}{Multi Head location based Attention}{83}{0}{12}
+\beamer@sectionintoc {13}{Multi Head multi resolution location based Attention}{84}{0}{13}

@@ -1,0 +1,127 @@
+\frametitle{Coverage mechanism Attention}
+\begin{center}
+	\begin{tikzpicture}[scale=0.2, every node/.style={transform shape, font=\fontsize{40}{40}\selectfont}]
+
+				\node [enc_h] (h1) {$h_{1}$};
+		\node [enc_h,right of = h1] (h2) {$h_{2}$};
+		\node [enc_h,right of = h2, node distance = 30em] (hi) {$h_{i}$};
+		\node [enc_h,right of = hi, node distance = 30em] (hTx) {$h_{Tx}$};
+		\draw [dotted] (h2.east) to (hi.west);
+		\draw [dotted] (hi.east) to (hTx.west);
+
+
+		\node [mlp_enc, above of = h1, node distance = 10em] (mlp1) {$MLP_{enc}$};
+		\path [line] (h1.north) to (mlp1.south);
+		\node [enc_h, above of = mlp1] (he1) {};
+		\path [line] (mlp1.north) to (he1.south);
+
+
+		\node [mlp_enc, above of = h2, node distance = 10em] (mlp2) {$MLP_{enc}$};
+		\path [line] (h2.north) to (mlp2.south);
+		\node [enc_h, above of = mlp2] (he2) {};
+		\path [line] (mlp2.north) to (he2.south);
+
+
+		\node [mlp_enc, above of = hi, node distance = 10em] (mlpi) {$MLP_{enc}$};
+		\path [line] (hi.north) to (mlpi.south);
+		\node [enc_h, above of = mlpi] (hei) {};
+		\path [line] (mlpi.north) to (hei.south);
+
+
+		\node [mlp_enc, above of = hTx, node distance = 10em] (mlpTx) {$MLP_{enc}$};
+		\path [line] (hTx.north) to (mlpTx.south);
+		\node [enc_h, above of = mlpTx] (heTx) {};
+		\path [line] (mlpTx.north) to (heTx.south);
+
+
+		\node [atts, minimum height = 12em,  above of=he1, node distance = 70em] (alpha1) {$\alpha_{1}^{1}$ \newline . \newline . \newline . \newline $\alpha_{i}^{1}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{1}$ \newline};
+
+		\node [atts, right of=alpha1, minimum height = 12em] (alpha2) {$\alpha_{1}^{2}$ \newline . \newline . \newline . \newline $\alpha_{i}^{2}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{2}$ \newline};
+
+		\node [atts, right of=alpha2, node distance = 15em, minimum height = 12em] (alphai) {$\alpha_{1}^{i}$ \newline . \newline . \newline . \newline $\alpha_{i}^{i}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{i}$ \newline};
+
+		\node [atts, right of=alphai, node distance = 15em, minimum height = 12em, text width = 1.5cm] (alphaTx) {$\alpha_{1}^{t-1}$ \newline . \newline . \newline . \newline $\alpha_{i}^{t-1}$ \newline . \newline . \newline . \newline $\alpha_{Tx}^{t-1}$ \newline};
+
+		\node [round, below of = alphai, xshift = -8em, node distance = 15em] (sum) {$\sum$};
+		\path [line] (alpha1.south) to (sum.north);
+		\path [line] (alpha2.south) to (sum.north);
+		\path [line] (alphai.south) to (sum.north);
+		\path [line] (alphaTx.south) to (sum.north);
+
+		\node [draw, below of = sum, node distance = 10em] (alphastar) {$\alpha_{1}^{\star}$ $\alpha_{2}^{\star}$ \dots \dots $\alpha_{i}^{\star}$ \dots \dots $\alpha_{Tx}^{\star}$};
+		\node [mlp_att, below of = alphastar, node distance = 10em] (mlp_w) {$MLP_{w}$};
+
+		\node [atts, below of = alpha1, node distance = 50em] (alpha1) {};
+		\node [atts, right of=alpha1] (alpha2) {};
+		\node [atts, right of=alpha2, node distance = 15em] (alphai) {};
+		\node [atts, right of=alphai, node distance = 15em] (alphaTx) {};
+
+
+		\draw [decorate,decoration={brace,amplitude=5pt, raise=0.5em}] (alphaTx.90) -- (alphaTx.-90) node [black,midway, xshift=6.5em] {\fontsize{25}{10}\selectfont $att\_dim$};
+
+		\path [line] (sum.south) to (alphastar.north);
+		\path [line] (alphastar.south) to (mlp_w.north);
+		\path [line] (mlp_w.south) to (alpha1.north);
+		\path [line] (mlp_w.south) to (alpha2.north);
+		\path [line] (mlp_w.south) to (alphai.north);
+		\path [line] (mlp_w.south) to (alphaTx.north);
+
+		\node [round, above of=heTx, node distance=10em, xshift=10em] (sum1) {$\sum$};
+
+		\path [line, dotted] (he1.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (he2.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (hei.north) to [bend left=2] (sum1.west);
+		\path [line, dotted] (heTx.north) to [bend left=2] (sum1.west);
+
+
+		\node [mlp_dec, right of = mlp_w, node distance = 63em, minimum width = 10em, yshift=30em, font=\fontsize{40}{10}\selectfont] (sim1) {$s_{i-1}$};
+		\node [mlp_dec, below of=sim1, minimum width = 20em, font=\fontsize{40}{10}\selectfont] (dec_z) {decz};
+		\path [line, dotted] (sim1.200) to (dec_z.170);
+		\path [line, dotted] (sim1.-20) to (dec_z.10);
+		\node [mlp_dec, below of=dec_z, node distance = 10em] (mlp_dec) {$MLP_{dec}$};
+		\path [line] (dec_z) to (mlp_dec);
+		\node [dec_z, below of = mlp_dec] (decz_enc) {};
+		\path [line] (mlp_dec) to (decz_enc);
+
+		\path [line, dotted] (decz_enc.south) to (sum1.north);
+
+%		\path [line, dotted] (ht.east) to [bend left=10] (sum1.110);
+		\node [atts, right of=sum1, node distance = 10em] (asdf) {};
+		\node [mlp_att, right of=asdf] (mlpg) {$MLP_{g}$};
+		\node [right of=mlpg, node distance=5em, font=\fontsize{40}{10}\selectfont] (e1) {$e_1$};
+
+		\node [below of=e1, node distance=5em, font=\fontsize{40}{10}\selectfont] (e2) {$e_2$};
+
+		\node [below of=e2, node distance=5em, font=\fontsize{40}{10}\selectfont] (ei) {$e_i$};
+
+		\node [below of=ei, node distance=5em, font=\fontsize{40}{10}\selectfont] (eTx) {$e_{Tx}$};
+
+		\node [atts, right of=ei, font=\fontsize{40}{10}\selectfont] (e) {e};
+
+		\path [line, dotted] (e1.east) to (e.105);
+		\path [line, dotted] (e2.east) to (e.130);
+		\path [line, dotted] (ei.east) to (e.-130);
+		\path [line, dotted] (eTx.east) to (e.-105);
+
+		\node [mlp_att, right of=e, font=\fontsize{40}{10}\selectfont] (sm) {$\sigma$};
+		\path [line] (e.east) to (sm.west);
+
+
+		\node [atts, right of=sm, font=\fontsize{40}{10}\selectfont] (alphas) {$\alpha$};
+		\path [line] (sm.east) to (alphas.west);
+
+		\path [line, dotted] (sum1.east) to (asdf.west);
+		\path [line, dotted] (sum1.east) to (asdf.west);
+		\path [line, dotted] (asdf.east) to (mlpg.west);
+		\path [line, dotted] (mlpg.east) to (e1.west);
+		\path [line, dotted] (mlpg.east) to (e1.west);
+		\path [line, dotted] (mlpg.east) |- (e2.west);
+		\path [line, dotted] (mlpg.east) |- (ei.west);
+		\path [line, dotted] (mlpg.east) |- (eTx.west);
+
+		\path [line, dotted] (alpha1.south) to [bend right=10] (sum1.west);
+		\path [line, dotted] (alpha2.south) to [bend right=10] (sum1.west);
+		\path [line, dotted] (alphai.south) to [bend right=10] (sum1.west);
+		\path [line, dotted] (alphaTx.south) to [bend right=10] (sum1.west);
+	\end{tikzpicture}
+\end{center}

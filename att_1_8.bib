@@ -1,0 +1,61 @@
+@article{Vaswani2017,
+abstract = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
+archivePrefix = {arXiv},
+arxivId = {1706.03762},
+author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia},
+eprint = {1706.03762},
+file = {:home/neo/MS/papers//2017{\_}Vaswani et al.{\_}Attention Is All You Need.pdf:pdf},
+mendeley-groups = {Thesis{\_}discussion{\_}speech},
+month = {jun},
+title = {{Attention Is All You Need}},
+url = {http://arxiv.org/abs/1706.03762},
+year = {2017}
+}
+
+@article{Bahdanau2014,
+	abstract = {Neural machine translation is a recently proposed approach to machine translation. Unlike the traditional statistical machine translation, the neural machine translation aims at building a single neural network that can be jointly tuned to maximize the translation performance. The models proposed recently for neural machine translation often belong to a family of encoder-decoders and consists of an encoder that encodes a source sentence into a fixed-length vector from which a decoder generates a translation. In this paper, we conjecture that the use of a fixed-length vector is a bottleneck in improving the performance of this basic encoder-decoder architecture, and propose to extend this by allowing a model to automatically (soft-)search for parts of a source sentence that are relevant to predicting a target word, without having to form these parts as a hard segment explicitly. With this new approach, we achieve a translation performance comparable to the existing state-of-the-art phrase-based system on the task of English-to-French translation. Furthermore, qualitative analysis reveals that the (soft-)alignments found by the model agree well with our intuition.},
+	archivePrefix = {arXiv},
+	arxivId = {1409.0473},
+	author = {Bahdanau, Dzmitry and Cho, Kyunghyun and Bengio, Yoshua},
+	eprint = {1409.0473},
+	file = {:home/neo/MS/papers/2015{\_}Bahdanau, Cho, Bengio{\_}N EURAL M ACHINE T RANSLATION.pdf:pdf},
+	mendeley-groups = {Tutorials,Speech,ICASSP{\_}2017/NLP},
+	month = {sep},
+	title = {{Neural Machine Translation by Jointly Learning to Align and Translate}},
+	url = {https://arxiv.org/pdf/1409.0473.pdf http://arxiv.org/abs/1409.0473},
+	year = {2014}
+}
+
+
+@article{Chorowski2015a,
+	abstract = {Recurrent sequence generators conditioned on input data through an attention mechanism have recently shown very good performance on a range of tasks in- cluding machine translation, handwriting synthesis and image caption gen- eration. We extend the attention-mechanism with features needed for speech recognition. We show that while an adaptation of the model used for machine translation in reaches a competitive 18.7{\%} phoneme error rate (PER) on the TIMIT phoneme recognition task, it can only be applied to utterances which are roughly as long as the ones it was trained on. We offer a qualitative explanation of this failure and propose a novel and generic method of adding location-awareness to the attention mechanism to alleviate this issue. The new method yields a model that is robust to long inputs and achieves 18{\%} PER in single utterances and 20{\%} in 10-times longer (repeated) utterances. Finally, we propose a change to the at- tention mechanism that prevents it from concentrating too much on single frames, which further reduces PER to 17.6{\%} level.},
+	archivePrefix = {arXiv},
+	arxivId = {1506.07503},
+	author = {Chorowski, Jan and Bahdanau, Dzmitry and Serdyuk, Dmitriy and Cho, Kyunghyun and Bengio, Yoshua},
+	doi = {10.1016/j.asr.2015.02.035},
+	eprint = {1506.07503},
+	file = {:home/neo/MS/papers//Unknown{\_}Chorowski, Bahdanau{\_}Attention-Based Models for Speech Recognition.pdf:pdf},
+	issn = {18791948},
+	journal = {NIPS},
+	mendeley-groups = {Speech,Thesis{\_}discussion{\_}speech,Thesis{\_}discussion{\_}speech/end-to-end},
+	month = {jun},
+	pages = {577--585},
+	title = {{Attention-Based Models for Speech Recognition}},
+	url = {http://papers.nips.cc/paper/5847-attention-based-models-for-speech-recognition.pdf{\%}5Cnhttp://arxiv.org/abs/1506.07503 http://arxiv.org/abs/1506.07503},
+	year = {2015}
+}
+
+@article{See2017,
+	abstract = {Neural sequence-to-sequence models have provided a viable new approach for abstractive text summarization (meaning they are not restricted to simply selecting and rearranging passages from the original text). However, these models have two shortcomings: they are liable to reproduce factual details inaccurately, and they tend to repeat themselves. In this work we propose a novel architecture that augments the standard sequence-to-sequence attentional model in two orthogonal ways. First, we use a hybrid pointer-generator network that can copy words from the source text via pointing, which aids accurate reproduction of information, while retaining the ability to produce novel words through the generator. Second, we use coverage to keep track of what has been summarized, which discourages repetition. We apply our model to the CNN / Daily Mail summarization task, outperforming the current abstractive state-of-the-art by at least 2 ROUGE points.},
+	archivePrefix = {arXiv},
+	arxivId = {1704.04368},
+	author = {See, Abigail and Liu, Peter J. and Manning, Christopher D.},
+	eprint = {1704.04368},
+	file = {:home/neo/MS/papers/2013{\_}See, Liu, Manning{\_}Get To The Point Summarization with Pointer-Generator Networks.pdf:pdf},
+	mendeley-groups = {Thesis{\_}discussion{\_}speech},
+	month = {apr},
+	title = {{Get To The Point: Summarization with Pointer-Generator Networks}},
+	url = {http://arxiv.org/abs/1704.04368},
+	year = {2017}
+}
+

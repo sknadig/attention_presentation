@@ -2208,9 +2208,9 @@ $$PE_{(pos, 2_{i+1})} = cos(pos/1000^{2i/d_{model}})$$
 \end{frame}
 }
 
-%\begin{frame}{References}
-%Some references to showcase [allowframebreaks] \cite{Vaswani2017, Bahdanau2014, Chorowski2015a, See2017}
-%\end{frame}
+\begin{frame}{References}
+Some references to showcase [allowframebreaks] \cite{Vaswani2017, Bahdanau2014, Chorowski2015a, See2017}
+\end{frame}
 
 \section{Multi Head Dot Product Attention}
 \section{Multi Head location based Attention}

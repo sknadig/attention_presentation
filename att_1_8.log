@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.6)  9 NOV 2018 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.6)  9 NOV 2018 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1244,13 +1244,13 @@ Overfull \vbox (15.63992pt too high) detected at line 31
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./att_1_8.toc)
-<iiitb_logo.png, id=92, 1710.39pt x 1415.2875pt>
+<iiitb_logo.png, id=112, 1710.39pt x 1415.2875pt>
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
 Package pdftex.def Info: iiitb_logo.png  used on input line 38.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (10.81685pt too high) detected at line 38
+Overfull \vbox (49.73074pt too high) detected at line 38
  []
 
 [2
@@ -3026,6 +3026,25 @@ Overfull \vbox (32.98428pt too high) detected at line 1567
 \openout4 = `att_1_8.vrb'.
 
  (./att_1_8.vrb
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 4.
+LaTeX Font Info:    No file OMScmss.fd. on input line 4.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 4.
+
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 1583.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [65
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
 Overfull \hbox (1.86858pt too wide) in paragraph at lines 4--4
  \OML/cmm/m/it/20.74 []$  
  []
@@ -3043,13 +3062,13 @@ Overfull \hbox (1.86858pt too wide) in paragraph at lines 6--6
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 1604.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1618.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (6.02611pt too high) detected at line 1604
+Overfull \vbox (6.02611pt too high) detected at line 1618
  []
 
-[65
+[66
 
 ]
 \openout4 = `att_1_8.vrb'.
@@ -3072,13 +3091,13 @@ Overfull \hbox (1.86858pt too wide) in paragraph at lines 8--8
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 1642.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1656.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (6.02608pt too high) detected at line 1642
+Overfull \vbox (6.02608pt too high) detected at line 1656
  []
 
-[66
+[67
 
 ]
 \openout4 = `att_1_8.vrb'.
@@ -3136,13 +3155,13 @@ Overfull \hbox (2.5458pt too wide) in paragraph at lines 81--81
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 1772.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1786.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (26.1541pt too high) detected at line 1772
+Overfull \vbox (26.1541pt too high) detected at line 1786
  []
 
-[67
+[68
 
 ]
 \openout4 = `att_1_8.vrb'.
@@ -3190,15 +3209,15 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <41.99982> not available
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 1809.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1823.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (31.45172pt too high) detected at line 1809
+Overfull \vbox (31.45172pt too high) detected at line 1823
  []
 
-[68
+[69
 
-] [69
+] [70
 
 ]
 \openout4 = `att_1_8.vrb'.
@@ -3221,9 +3240,9 @@ Overfull \hbox (1.86858pt too wide) in paragraph at lines 6--6
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 1849.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1863.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
- [70
+ [71
 
 ]
 \openout4 = `att_1_8.vrb'.
@@ -3246,9 +3265,9 @@ Overfull \hbox (1.86858pt too wide) in paragraph at lines 9--9
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 1891.
+Package pdftex.def Info: iiitb_logo.png  used on input line 1905.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
- [71
+ [72
 
 ]
 \openout4 = `att_1_8.vrb'.
@@ -3311,13 +3330,13 @@ Overfull \hbox (24.34282pt too wide) in paragraph at lines 130--131
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 2026.
+Package pdftex.def Info: iiitb_logo.png  used on input line 2040.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (32.95232pt too high) detected at line 2026
+Overfull \vbox (32.95232pt too high) detected at line 2040
  []
 
-[72
+[73
 
 ]
 \openout4 = `att_1_8.vrb'.
@@ -3340,13 +3359,94 @@ Overfull \hbox (1.86858pt too wide) in paragraph at lines 9--9
 )
 File: iiitb_logo.png Graphic file (type png)
 <use iiitb_logo.png>
-Package pdftex.def Info: iiitb_logo.png  used on input line 2065.
+Package pdftex.def Info: iiitb_logo.png  used on input line 2079.
 (pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
 
-Overfull \vbox (31.45172pt too high) detected at line 2065
+Overfull \vbox (31.45172pt too high) detected at line 2079
  []
 
-[73
+[74
+
+] [75
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 2108.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (19.03857pt too high) detected at line 2108
+ []
+
+[76
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 2174.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [77
+
+]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+<mh_att.png, id=538, 525.965pt x 729.72626pt>
+File: mh_att.png Graphic file (type png)
+<use mh_att.png>
+Package pdftex.def Info: mh_att.png  used on input line 4.
+(pdftex.def)             Requested size: 174.48389pt x 242.07977pt.
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 2183.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+Overfull \vbox (45.48386pt too high) detected at line 2183
+ []
+
+[78
+
+ <./mh_att.png>]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb
+<pos_enc.png, id=545, 5493.52374pt x 743.77875pt>
+File: pos_enc.png Graphic file (type png)
+<use pos_enc.png>
+Package pdftex.def Info: pos_enc.png  used on input line 4.
+(pdftex.def)             Requested size: 307.21611pt x 41.59457pt.
+)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 2193.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+ [79
+
+ <./pos_enc.png>]
+\openout4 = `att_1_8.vrb'.
+
+ (./att_1_8.vrb)
+File: iiitb_logo.png Graphic file (type png)
+<use iiitb_logo.png>
+Package pdftex.def Info: iiitb_logo.png  used on input line 2203.
+(pdftex.def)             Requested size: 33.00018pt x 27.29674pt.
+
+[80
+
+] [81
+
+] [82
+
+] [83
+
+] [84
 
 ]
 \tf@nav=\write6
@@ -3358,47 +3458,54 @@ Overfull \vbox (31.45172pt too high) detected at line 2065
 \tf@snm=\write8
 \openout8 = `att_1_8.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2067.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2067.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2218.
  (./att_1_8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2067.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2067.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2218.
 
 Package rerunfilecheck Info: File `att_1_8.out' has not changed.
-(rerunfilecheck)             Checksum: 21798058A4DB05C5FD30212F2DFB96D4;553.
+(rerunfilecheck)             Checksum: 8DC9B252CE827CFC472334F0CE3FD90E;840.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 35.12pt have occurred.
 
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 35748 strings out of 492982
- 867651 string characters out of 6134896
- 1134717 words of memory out of 5000000
- 38331 multiletter control sequences out of 15000+600000
+ 36067 strings out of 492982
+ 872729 string characters out of 6134896
+ 1135837 words of memory out of 5000000
+ 38607 multiletter control sequences out of 15000+600000
  39969 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,98p,1931b,1144s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmssi17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on att_1_8.pdf (73 pages, 571171 bytes).
+pdfTeX warning (dest): name{Navigation85} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on att_1_8.pdf (84 pages, 765285 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 461 compressed objects within 5 object streams
- 156 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 680 PDF objects out of 1000 (max. 8388607)
+ 541 compressed objects within 6 object streams
+ 183 named destinations out of 1000 (max. 500000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 
