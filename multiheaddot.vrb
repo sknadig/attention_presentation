@@ -1,7 +1,6 @@
-\frametitle{Positional Encoding - Example}
-\begin{center}
-
-	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{pos_enc.png}
-	$$PE_{(pos, 2_{i})} = sin(pos/1000^{2i/d_{model}})$$
-	$$PE_{(pos, 2_{i+1})} = cos(pos/1000^{2i/d_{model}})$$
-\end{center}
+\frametitle{Other variants}
+\begin{itemize}
+^^I\item MultiHead Additive Attention - Replace dot product by sum and an MLP
+^^I\item MultiHead locatiob aware attebtuib - Consider attention weights from previous positions and use a CNN (like Location aware Attention we discussed)
+^^I\item MultiHead Multi Resolution Attention - Use different filter size for each head!
+\end{itemize}

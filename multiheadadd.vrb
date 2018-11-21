@@ -1,0 +1,7 @@
+\frametitle{Positional Encoding - Example}
+\begin{center}
+
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{pos_enc.png}
+	$$PE_{(pos, 2_{i})} = sin(pos/1000^{2i/d_{model}})$$
+	$$PE_{(pos, 2_{i+1})} = cos(pos/1000^{2i/d_{model}})$$
+\end{center}

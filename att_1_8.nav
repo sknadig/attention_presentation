@@ -99,40 +99,8 @@
 \headcommand {\beamer@framepages {73}{73}}
 \headcommand {\slideentry {9}{0}{5}{74/74}{}{0}}
 \headcommand {\beamer@framepages {74}{74}}
-\headcommand {\beamer@sectionpages {70}{74}}
+\headcommand {\beamer@partpages {1}{74}}
 \headcommand {\beamer@subsectionpages {70}{74}}
-\headcommand {\sectionentry {10}{Multi-Head Attention}{75}{Multi-Head Attention}{0}}
-\headcommand {\slideentry {10}{0}{1}{75/75}{}{0}}
-\headcommand {\beamer@framepages {75}{75}}
-\headcommand {\slideentry {10}{0}{2}{76/76}{}{0}}
-\headcommand {\beamer@framepages {76}{76}}
-\headcommand {\slideentry {10}{0}{3}{77/77}{}{0}}
-\headcommand {\beamer@framepages {77}{77}}
-\headcommand {\slideentry {10}{0}{4}{78/78}{}{0}}
-\headcommand {\beamer@framepages {78}{78}}
-\headcommand {\slideentry {10}{0}{5}{79/79}{}{0}}
-\headcommand {\beamer@framepages {79}{79}}
-\headcommand {\slideentry {10}{0}{6}{80/80}{}{0}}
-\headcommand {\beamer@framepages {80}{80}}
-\headcommand {\slideentry {10}{0}{7}{81/81}{}{0}}
-\headcommand {\beamer@framepages {81}{81}}
-\headcommand {\beamer@sectionpages {75}{81}}
-\headcommand {\beamer@subsectionpages {75}{81}}
-\headcommand {\sectionentry {11}{Multi Head Dot Product Attention}{82}{Multi Head Dot Product Attention}{0}}
-\headcommand {\slideentry {11}{0}{1}{82/82}{}{0}}
-\headcommand {\beamer@framepages {82}{82}}
-\headcommand {\beamer@sectionpages {82}{82}}
-\headcommand {\beamer@subsectionpages {82}{82}}
-\headcommand {\sectionentry {12}{Multi Head location based Attention}{83}{Multi Head location based Attention}{0}}
-\headcommand {\slideentry {12}{0}{1}{83/83}{}{0}}
-\headcommand {\beamer@framepages {83}{83}}
-\headcommand {\beamer@sectionpages {83}{83}}
-\headcommand {\beamer@subsectionpages {83}{83}}
-\headcommand {\sectionentry {13}{Multi Head multi resolution location based Attention}{84}{Multi Head multi resolution location based Attention}{0}}
-\headcommand {\slideentry {13}{0}{1}{84/84}{}{0}}
-\headcommand {\beamer@framepages {84}{84}}
-\headcommand {\beamer@partpages {1}{84}}
-\headcommand {\beamer@subsectionpages {84}{84}}
-\headcommand {\beamer@sectionpages {84}{84}}
-\headcommand {\beamer@documentpages {84}}
-\headcommand {\gdef \inserttotalframenumber {32}}
+\headcommand {\beamer@sectionpages {70}{74}}
+\headcommand {\beamer@documentpages {74}}
+\headcommand {\gdef \inserttotalframenumber {27}}
